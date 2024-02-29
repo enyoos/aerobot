@@ -1,2 +1,2 @@
 @echo off
-mvn compile && mvn exec:java -Dexec.mainClass="com.xatkit.example.GreetingsBot" 
+mvn clean compile && mvn exec:java -Dexec.mainClass="com.xatkit.example.GreetingsBot" 

@@ -23,235 +23,49 @@ import com.xatkit.plugins.react.platform.action.*;
 import com.xatkit.plugins.react.platform.io.*;
 import org.apache.commons.configuration2.BaseConfiguration;
 import static com.xatkit.example.helpers.Utils.*;
+import static com.xatkit.example.helpers.Intents.*;
 
 public class GreetingsBot {
 
         private static NavTree tree    = NavTree.init_nav_3();
         private static boolean asked   = false;
+        private static final int PORT  = 8080; // change it on the school's computer
         private static String nameTutor= "";
         private static List<Tuteur> set= null;
         private static String sub      = null;
         private static String question = null;
 
+        // PRINT EVAL LOOP
         public static void main(String[] args) {
 
-                String[] cheat_     = {
-                        "Peux tu resoudre pour moi ce problem ?",
-                        "Est-ce que tu peux m'aider a completer ce devoir",
-                        "Resoud ce problem",
-                        "Resoud cette question",
-                        "Fais mon devoir", 
-                        "Donne moi la reponse",
-                        "Dis moi la bonne reponse",
-                        "C'est quoi la bonne reponse",
-                        "Est-ce que tu peux m'aider a remettre mon devoir",
-                        "Simplifie cette equation",
-                };
+                val menu           = intent("Menu")
+                        .trainingSentences(menu_);
 
-                String[] greetings_ = {
-                        "Salut",
-                        "Yo",
-                        "Bonjour",
-                        "hello",
-                        "Hey",
-                        "Allo",
-                        "Heureux de te voir encore",
-                        "Que la paix soit sur toi",
-                        "Hello world",
-                        "Kespass",
-                        "Wesh",
-                        "Mon gars",
-                };
+                val cheat          = intent("Cheat")
+                        .trainingSentences(cheat_);
 
-                String[] thankful_   = {
-                        "woa, merci beaucoup",
-                        "ton service me fait plaisir",
-                        "Merci beaucoup",
-                        "Je te remercie !",
-                        "Merci",
-                        "Tu me sauve la vie",
-                        "J'apprecie ton aide",
-                        "Tu m'as beaucoup aider",
-                        "Ton aide m'est utile",
-                };
+                val thankful       = intent("Thankful")
+                        .trainingSentences( thankful_ );
 
-                String[] howAreYou_ = {
-                        "Comment tu vas ?", 
-                        "Qu'est-ce qu'il y a de nouveau ?",
-                        "Comment te sens-tu",
-                        "Quelles sont tes sentiments ?" ,
-                };
+                val howAreYou      = intent("HowAreYou")
+                        .trainingSentences(howAreYou_);
 
-                String[] sad_       = {
-                        "Je ne vais pas trop bien...",
-                        "Je me sens pas bien",
-                        "Je me sens mal",
-                        "Je suis triste...",
-                        "Je suis en depression",
-                        "Je manque de motivation",
-                        "Je n'ai plus envie de vivre",
-                        "Je pense que je vais echouer ma session",
-                        "Je pense que l'ecole n'est pas fait pour moi !",
-                        "J'ai beaucoup de probleme en ce moment",
-                        "Burnout",
-                        "J'ai faim",
-                        "J'ai des problemes avec ma famille",
-                        "Ma copine m'a quitter",
-                        "Je suis en divorce",
-                        "Mes parents sont morts",
-                        "Mes amis sont morts",
-                        "J'ai peur d'aller a l'ecole",
-                        "J'ai de la peine",
-                        "Ma meuf m'a quitter",
-                        "Je fais un burnout",
-                        "J'ai beaucoup de chose a faire",
-                        "J'ai trop de truc a prendre en compte",
-                        "Je n'aime plus travailler",
-                        "Je n'ai pas beaucoup d'amis",
-                };
+                val sad            = intent ( "Sad" )
+                        .trainingSentences( sad_ );
 
-                String[] joy_          = {
-                        "Je vais tres bien !",
-                        "Oui ca roule,  merci bcp",
-                        "Oui sa va bien",
-                        "Tout marche bien dans ma vie",
-                        "Je suis de bonne humeur",
-                        "Je me suis lever du bon pied",
-                        "Je ne suis plus en depression",
-                        "Je suis heureux",
-                        "Je suis motiver pour finir ma session",
-                        "J'ai hate de finir l'ecole",
-                        "J'aime aller a l'ecole",
-                        "J'aime la vie",
-                };
+                val happy          = intent ( "Happy" )
+                        .trainingSentences( joy_ );
+                
+                val greetings      = intent ("Greetings" )
+                        .trainingSentences( greetings_ );
 
-                // ici on peut redirect le tout a chat gpt, mais je pense que c'est meilleur d'en faire une compilation ?
-                String[] tuteur_         = {
-                        "J'aimerais un tuteur", 
-                        "Quelles sont les tuteurs disponibles",
-                        "Puis-je avoir un rendez vous avec un tuteur ?",
-                        "Est-ce que il y a des tuteurs ?",
-                        "Est-ce qu'il y a du tutorat ?",
-                        "J'ai besoin d'un mentor",
-                        "J'ai besoin d'aide en math",
-                        "J'ai besoin d'un accompagnement personnel",
-                        "J'ai besoin d'aide dans mes etudes",
-                        "J'ai de la difficulte dans mes matieres",
-                        "J'ai des mauvaises notes en math",
-                        "Je pense que je vais echouer ma session",
-                        "J'aimerais augmenter ma cote R",
-                        "J'aimerais avoir de meilleur note",
-                };
-
-                /*
-                * Define the intents our bot will react to.
-                * <p>
-                * In this example we want our bot to answer greetings inputs and "how are you" questions, so we create an
-                * intent for each, and we give a few example training sentences to configure the underlying NLP engine.
-                * <p>
-                * Note that we recommend the usage of Lombok's val when using the Xatkit DSL: the fluent API defines many
-                * interfaces that are not useful for bot designers. If you don't want to use val you can use our own
-                * interface IntentVar instead.
-                */
-
-                // let's use french sentences
-
-                val greetings = intent("Greetings")
-                        .trainingSentence(greetings_[0])
-                        .trainingSentence(greetings_[1])
-                        .trainingSentence(greetings_[2])
-                        .trainingSentence(greetings_[3])
-                        .trainingSentence(greetings_[4])
-                        .trainingSentence(greetings_[5])
-                        .trainingSentence(greetings_[6]);
-
-                val cheat   = intent("Cheat")
-                        .trainingSentence(cheat_[0])
-                        .trainingSentence(cheat_[1])
-                        .trainingSentence(cheat_[2])
-                        .trainingSentence(cheat_[3])
-                        .trainingSentence(cheat_[4])
-                        .trainingSentence(cheat_[5])
-                        .trainingSentence(cheat_[6])
-                        .trainingSentence(cheat_[7])
-                        .trainingSentence(cheat_[8]);
-
-                val thankful  = intent("Thankful")
-                        .trainingSentence( thankful_[0] )
-                        .trainingSentence( thankful_[1] )
-                        .trainingSentence( thankful_[2] )
-                        .trainingSentence( thankful_[3] )
-                        .trainingSentence( thankful_[4] )
-                        .trainingSentence( thankful_[5] )
-                        .trainingSentence( thankful_[6] )
-                        .trainingSentence( thankful_[7] );
-
-                val howAreYou = intent("HowAreYou")
-                        .trainingSentence(howAreYou_[0])
-                        .trainingSentence(howAreYou_[1])
-                        .trainingSentence(howAreYou_[2])
-                        .trainingSentence(howAreYou_[3]);
-
-                val sad            = intent ( "sad" )
-                        .trainingSentence ( sad_[0] )  
-                        .trainingSentence ( sad_[1] )  
-                        .trainingSentence ( sad_[2] )  
-                        .trainingSentence ( sad_[3] )  
-                        .trainingSentence ( sad_[4] )  
-                        .trainingSentence ( sad_[5] )  
-                        .trainingSentence ( sad_[6] )  
-                        .trainingSentence ( sad_[7] )  
-                        .trainingSentence ( sad_[9] )  
-                        .trainingSentence ( sad_[10] )  
-                        .trainingSentence ( sad_[11] )  
-                        .trainingSentence ( sad_[12] )  
-                        .trainingSentence ( sad_[13] )  
-                        .trainingSentence ( sad_[14] );
-
-                val happy          = intent ( "happy" )
-                        .trainingSentence ( joy_[0] )
-                        .trainingSentence ( joy_[1] )
-                        .trainingSentence ( joy_[2] )
-                        .trainingSentence ( joy_[3] )
-                        .trainingSentence ( joy_[4] )
-                        .trainingSentence ( joy_[5] );
-
-                /*
-                * Instantiate the platform we will use in the bot definition.
-                * <p>
-                * Instantiating the platform before specifying the bot's states creates a usable reference that can be
-                * accessed in the states, e.g:
-                * <pre>
-                * {@code
-                * myState
-                *   .body(context -> reactPlatform.reply(context, "Hi, nice to meet you!");
-                * }
-                * </pre>
-                */
-                /*
-                * Similarly, instantiate the intent/event providers we want to use.
-                * <p>
-                * In our example we want to receive intents (i.e. interpreted user inputs) from our react client, so we
-                * create a ReactIntentProvider instance. We also want to receive events from the react client (e.g. when the
-                * client's connection is ready), so we create a ReactEventProvider instance.
-                * <p>
-                * We can instantiate as many providers as we want, including providers from different platforms.
-                */
                 ReactPlatform reactPlatform             = new ReactPlatform();
                 ReactEventProvider reactEventProvider   = reactPlatform.getReactEventProvider();
                 ReactIntentProvider reactIntentProvider = reactPlatform.getReactIntentProvider();
 
-                /*
-                * Create the states we want to use in our bot.
-                * <p>
-                * Similarly to platform/provider creation, we create the state variables first, and we specify their content
-                * later. This allows to define circular references between states (e.g. AwaitingQuestion -> HandleWelcome ->
-                * AwaitingQuestion).
-                * <p>
-                * This is not mandatory though, the important point is to have fully specified states when we build the
-                * final bot model.
-                */
                 val init = state("Init");
+                val handleSaved      = state ( "Saved" );
+                val answerQuestion = state ( "ansQuestionChoosed" );
                 val awaitingInput  = state("AwaitingInput");
                 val handleWelcome  = state("HandleWelcome");
                 val promptChooseSubject = state ( "PromptSubject" );
@@ -261,51 +75,78 @@ public class GreetingsBot {
                 val handleThankful = state("HandleThankful");
                 val handleCheat    = state("HandleCheat");
                 val handleHappy    = state("HandleHappy");
+                val giveTutorDesc = state ( "giveDesc" );
                 val handleSad      = state("HandleSad");
-
-                // CHIMIE
+                val promptUser       = state ( "promptUser" );
+                val handleSuggestion = state ( "HandleSugg" );
                 val handleChimie = state ( "HandleChimie" );
-
-                // MATH
-                val handleListMatiereMath = state ( "listMath" );
-                val handleAlgebreLineaire = state ( "HandleAlgebreLineaire" );
+                val handleListMatiereMath  = state ( "listMath" );
+                val handleAlgebreLineaire  = state ( "HandleAlgebreLineaire" );
                 val handleCalcul_I         = state ( "HandleCalculI");
                 val handleCalcul_II        = state ( "HandleCalculII");
                 val handlePhysique         = state ( "HandlePhysique");
+                val giveAllPhysTutors   = state ( "giveAllPhysTutors" );        
+                val giveAllChimieTutors = state ( "giveAllChimieTutors" );
+                val giveAllMathTutors   = state ( "giveAllMathTutors" );
+                val handleCalculusI = state( "HandleCalculusI" );
+                val handleCalculusII = state ( "HandleCalculusII" );
+                val handleDiscreteMath = state ( "HandleDMath" );
+                val listAllQuestionMath = state ( "allQMathCalc" );
+                val handleDiscussion    = state ( "handleFreeWill" );
+                val handleQuitMenu      = state ( "handleQuitMenu" );
+                val handleGreetings     = state ( "handleGreetings" );
+
 
                 init
                         .next()
-                        .when(eventIs(ReactEventProvider.ClientReady)).moveTo(awaitingInput);
+                        .when(eventIs(ReactEventProvider.ClientReady)).moveTo(handleWelcome);
 
-                val promptUser = state ( "promptUser" );
-                val handleSuggestion = state ( "HandleSugg" );
 
                 awaitingInput
                         .next()
-                        .when(intentIs(greetings)).moveTo(handleWelcome)
-                        .when(intentIs(howAreYou)).moveTo(handleWhatsUp)
+                        .when(intentIs(menu)).moveTo ( promptUser )
                         .when(intentIs(thankful)).moveTo(handleThankful)
+                        .when(intentIs(greetings)).moveTo( handleGreetings )
+                        .when(intentIs(howAreYou)).moveTo(handleWhatsUp)
                         .when(intentIs(cheat)).moveTo (handleCheat);
 
                 handleWelcome
-                        .body(context -> reactPlatform.reply(context, "Salut ! Je m'appelle 🔥roseBot🔥. Je suis enchanté de faire ta rencontre 😊!"))
-                        .next()
-                        .moveTo(promptUser);
-
-                handleWhatsUp
-                        .body(context -> reactPlatform.reply(context, "Je vais bien ✅! Et toi ?"))
+                        .body(context -> {
+                                reactPlatform.reply(context, "Salut ! Je m'appelle 🔥roseBot🔥. Je suis enchanté de faire ta rencontre 😊!");
+                                reactPlatform.reply(context, "Comment vas-tu aujourd'hui ?!");
+                        })
                         .next()
                                 .when(intentIs(happy)).moveTo( handleHappy )
-                                .when(intentIs( sad )).moveTo ( handleSad );
+                                .when(intentIs(cheat)).moveTo( handleCheat )
+                                .when(intentIs(howAreYou)).moveTo( handleWhatsUp )
+                                .when(intentIs( happy )).moveTo ( handleHappy )
+                                .when(intentIs( sad )).moveTo ( handleSad )
+                        .fallback ( context -> {
+                                reactPlatform.reply ( context, "Eh, et alors ? 😵");
+                        });
+
+                handleWhatsUp
+                        .body(context -> reactPlatform.reply(context, "Je vais bien ✅! Merci."))
+                        .next()
+                        .moveTo ( promptUser );
 
                 handleHappy
                         .body( context -> reactPlatform.reply(context, "Wow, je suis très content pour toi 👌!"))
                         .next()
                         .moveTo(promptUser);
 
+                handleGreetings
+                        .body (
+                                context -> reactPlatform.reply ( context, "Salut👋")
+                        )
+                        .next()
+                        .moveTo ( awaitingInput );
+
                 handleSad
-                        .body( context -> reactPlatform.reply(context, "Les temps sont très difficiles 😓. Voici une citation pour te motiver 💪" + 
-                                giveMeQuote()))
+                        .body( context -> {
+                                reactPlatform.reply(context, "Les temps sont très difficiles 😓. Voici une citation pour te motiver 💪");
+                                reactPlatform.reply(context, giveMeQuote());
+                        })
                         .next()
                         .moveTo(promptUser);
 
@@ -323,42 +164,54 @@ public class GreetingsBot {
                                 .when( intentIs( CoreLibrary.AnyValue ).and( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         return clicked.equals( I_HAVE_SUGG );
-                                })).moveTo( handleSuggestion );
+                                })).moveTo( handleSuggestion )
+                                .when( intentIs ( CoreLibrary.AnyValue).and ( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        return clicked.equals( DISCUTONS );
+                                })).moveTo ( handleDiscussion )
+                                .when ( intentIs( CoreLibrary.AnyValue).and ( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        return clicked.equals( QUITTER_MENU );
+                                })).moveTo(handleQuitMenu);
 
+                handleQuitMenu
+                        .body (
+                                context -> reactPlatform.reply ( context, "Avec plaisir, n'hésite pas à m'envoyer le message *menu* pour faire apparaître ces choix." ) 
+                        )
+                        .next()
+                        .moveTo ( awaitingInput );
 
                 handleThankful
                         .body( context -> reactPlatform.reply(context, "Avec plaisir 😊!"))
                         .next()
                         .moveTo(awaitingInput);
 
-
                 handleCheat
-                        .body(context -> reactPlatform.reply(context, "Désolé je ne peux pas répondre à ce genre de question 🥺.") )
+                        .body(context -> reactPlatform.reply(context, "Désolé je ne peux pas répondre à ce genre de question 🥺") )
                         .next()
                         .moveTo ( awaitingInput );
 
-                val handleSaved      = state ( "Saved" );
 
                 handleSuggestion
                         .body ( context -> reactPlatform.reply ( context, "Super ! Quelle est cette merveilleuse idée 🧐"))
                         .next ()
                                 .when ( intentIs( CoreLibrary.AnyValue ).and ( context -> {
                                         String sugg = ( String ) context.getIntent().getValue("value");
+                                        saveSugg ( sugg );
+
                                         return true;
                                 })).moveTo ( handleSaved );
 
-
                 handleSaved
-                        .body ( context -> reactPlatform.reply ( context, "Merçi, j'ai mémorisé ta magnifique suggestion dans ma base de donnée!"))
+                        .body ( context -> {
+                                reactPlatform.reply ( context, "Merçi, j'ai mémorisé ta magnifique suggestion dans ma base de donnée!");
+                                reactPlatform.reply ( context, "Je l'ai aussi envoyé à mon supérieur😉");
+                        })
                         .next()
                         .moveTo ( promptUser );
-
-                val giveAllPhysTutors   = state ( "giveAllPhysTutors" );        
-                val giveAllChimieTutors = state ( "giveAllChimieTutors" );
-                val giveAllMathTutors   = state ( "giveAllMathTutors" );
-
+                
                 handleBooking
-                        .body( context -> reactPlatform.reply(context, "Super, choisis la spécification voulue de ton tuteur", optionsSubject()) )
+                        .body( context -> reactPlatform.reply(context, "Super! Choisis la spécification voulue de ton tuteur", optionsSubject()) )
                         .next()
                                 .when( intentIs( CoreLibrary.AnyValue ).and ( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
@@ -371,11 +224,12 @@ public class GreetingsBot {
                                 .when( intentIs ( CoreLibrary.AnyValue ).and( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         return clicked.equals( PHYS );
-                                })).moveTo( giveAllPhysTutors );
+                                })).moveTo( giveAllPhysTutors )
+                                .when ( intentIs ( CoreLibrary.AnyValue ).and ( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        return clicked.equals ( QUITTER_MENU );
+                                })).moveTo ( handleQuitMenu );
 
-                val giveTutorDesc = state ( "giveDesc" );
-
-                // handle in all give<...> the input
                 giveAllPhysTutors
                         .body( context -> reactPlatform.reply ( context, String.format( "Voici nos meilleurs tuteurs en %s", PHYS ), Tuteur.static_cast (getTuteurPhysique()) ))
                         .next()
@@ -392,7 +246,7 @@ public class GreetingsBot {
                                 .when ( intentIs( CoreLibrary.AnyValue ).and ( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         nameTutor      = clicked.substring(0, clicked.length()-1); 
-                                        set            = getTuteurPhysique();
+                                        set            = getTuteurChimie();
                                         return true;
                                 })).moveTo( giveTutorDesc );
 
@@ -403,20 +257,18 @@ public class GreetingsBot {
                                 .when ( intentIs( CoreLibrary.AnyValue ).and ( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         nameTutor      = clicked;
-                                        set            = getTuteurPhysique();
+                                        set            = getTuteurMath();
                                         return true;
                                 })).moveTo( giveTutorDesc );
 
                 giveTutorDesc
                         .body ( context -> {
-                                        reactPlatform.reply ( 
-                                                context, 
-                                                new CustomSb( "Voici les informations de " + nameTutor ).appendN("").append(Tuteur.fromSet(set, nameTutor).toString()).out()
-                                        );
-                                }
-                        )
+                                reactPlatform.reply ( context, "Voici les informations de " + nameTutor );
+                                reactPlatform.reply ( context, Tuteur.fromSet ( set, nameTutor ).toString() );
+                                asked = true;
+                        })
                         .next()
-                        .moveTo ( awaitingInput );
+                        .moveTo ( promptUser );
 
                 promptChooseSubject
                         .body ( context -> reactPlatform.reply( context, "Quelle est le domaine scientifique de cette question ?", optionsSubject() ) )
@@ -433,19 +285,15 @@ public class GreetingsBot {
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         return clicked.equals( PHYS );
                                 })).moveTo ( handlePhysique )
-                        .fallback ( context -> {
-                                reactPlatform.reply ( context, "Cette matière n'existe pas 😵...");
-                        });
+                                .when( intentIs( CoreLibrary.AnyValue ).and ( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        return clicked.equals ( QUITTER_MENU );
+                                })).moveTo ( handleQuitMenu );
 
                 handleChimie
                         .body( context -> reactPlatform.reply ( context, "Voici les matières disponibles"))
                         .next()
                         .moveTo( awaitingInput );
-
-                val handleCalculusI = state( "HandleCalculusI" );
-                val handleCalculusII = state ( "HandleCalculusII" );
-                val handleDiscreteMath = state ( "HandleDMath" );
-                val listAllQuestionMath = state ( "allQMathCalc" );
 
                 handleListMatiereMath
                         .body ( context -> reactPlatform.reply ( context, "Choisis ta matière pertinente à cette question", listeMatiereMath() ))
@@ -469,12 +317,15 @@ public class GreetingsBot {
                                         String clicked = ( String ) context.getIntent().getValue ( "value" );
                                         sub = MATH_ALGEBRE_LIN;
                                         return clicked.equals( MATH_ALGEBRE_LIN );
-                                })).moveTo ( listAllQuestionMath );
-
-                val answerQuestion = state ( "ansQuestionChoosed" );
+                                })).moveTo ( listAllQuestionMath )
+                                .when( intentIs( CoreLibrary.AnyValue ).and ( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        return clicked.equals ( QUITTER_MENU );
+                                })).moveTo ( handleQuitMenu );
 
                 answerQuestion
                         .body ( context -> {
+                                asked    = true;
                                 String ret = tree.navigate(MATH).navigate(sub).navigate(question + " ?").nodes[0].header;
                                 reactPlatform.reply ( context, ret );
                         })
@@ -487,11 +338,8 @@ public class GreetingsBot {
                                 .when ( intentIs( CoreLibrary.AnyValue ).and ( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         question = clicked;
-                                        asked    = true;
                                         return true;
                                 })).moveTo( answerQuestion );
-
-
 
                 val defaultFallback = fallbackState()
                         .body(context -> reactPlatform.reply(context, "Excuse-moi, mais je n'ai pas bien saisi 🤭."));
@@ -508,19 +356,9 @@ public class GreetingsBot {
                 botConfiguration.addProperty(IntentRecognitionProviderFactory.INTENT_PROVIDER_KEY, NlpjsConfiguration.NLPJS_INTENT_PROVIDER);
                 botConfiguration.addProperty(NlpjsConfiguration.AGENT_ID_KEY, "default");
                 botConfiguration.addProperty(NlpjsConfiguration.LANGUAGE_CODE_KEY, "en");
-                botConfiguration.addProperty(NlpjsConfiguration.NLPJS_SERVER_KEY, "http://localhost:8080"); 
-
-                /*
-                * Add configuration properties (e.g. authentication tokens, platform tuning, intent provider to use).
-                * Check the corresponding platform's wiki page for further information on optional/mandatory parameters and
-                * their values.
-                */
+                botConfiguration.addProperty(NlpjsConfiguration.NLPJS_SERVER_KEY, "http://localhost:" + PORT ); 
 
                 XatkitBot xatkitBot = new XatkitBot(botModel, botConfiguration);
                 xatkitBot.run();
-                /*
-                * The bot is now started, you can check http://localhost:5000/admin to test it.
-                * The logs of the bot are stored in the logs folder at the root of this project.
-                */
         }
 }

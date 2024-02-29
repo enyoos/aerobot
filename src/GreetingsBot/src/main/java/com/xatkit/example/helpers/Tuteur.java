@@ -9,6 +9,7 @@ public class Tuteur {
     private static final String MEN   = "🙋🏻‍♂️";
 
     public char sex;
+    public String desc; // parle d'une chose que tu aime faire ? ( max 10 mots )
     public String name;
     public String omnivox;
     public String outlook;
@@ -18,7 +19,13 @@ public class Tuteur {
         this.omnivox = omnivox;
         this.outlook = outlook;
         this.sex     = sex;
-        this.name    = name;
+        this.name    = name + ( sex == 'm' ? MEN : WOMAN );
+    }
+
+    public Tuteur setDescription ( String loisir )
+    {
+        this.desc = this.loisir;
+        return this;
     }
 
     public Tuteur ( String name )
@@ -27,15 +34,15 @@ public class Tuteur {
     }
 
     // give the name
-    public String output() { return sex == 'm' ? this.name + MEN : this.name + WOMAN; }
+    public String output() { return this.name; }
 
     public static Tuteur fromSet ( List<Tuteur> tuteurs, String name )
     {
-        Tuteur tt;         
+        Tuteur tt;
         for ( Tuteur tuteur : tuteurs )
         {
-            if ( tuteur.output().equals ( name ) ) return tuteur;
-            else                              continue;
+            if ( tuteur.name.equals ( name ) ) return tuteur;
+            else                                   continue;
         }
 
         return null;
@@ -52,6 +59,13 @@ public class Tuteur {
 
     @Override
     public String toString()
-    { return "⋆˚✿˖° " + this.omnivox + "\n" + "📧" + this.outlook; }
+    {
+        // make it align is the markdown ouptut view.
+        String ret   = "- ⋆˚✿˖° " + this.omnivox;
+        String other = "-       📧 " + this.outlook;
+        String otherr= "-       ❤️ " + this.desc;
+
+        return ret + "\n" + other + "\n" + otherr;
+    }
 
 }

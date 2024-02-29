@@ -18,6 +18,22 @@ public class NavTree
             t.navigate( MATH ).navigate( MATH_CALC_I ).navigate ( "C'est quoi la dérivation ?" ).nodes[0].header );
     }
 
+    public static NavTree init_nav_discutons()
+    {
+        final int size = 3;        
+
+        Node[] nodes_ = new Node[size];
+
+        nodes_[0] = new Node(VIE_PROFESSIONELLE);
+
+        nodes_[1] = new Node(PHILOSOPHIE);
+
+        nodes_[2] = new Node(MES_ORIGINES);
+
+
+        return null;
+    }
+
     // inits the default nav3 
     public static NavTree init_nav_3 ( )
     {
@@ -100,11 +116,11 @@ public class NavTree
                             ).appendN(
                                 ""
                             ).appendN(
-                                "-Dans la mécanique 👨‍🔧"
+                                "- Dans la mécanique 👨‍🔧"
                             ).appendN(
-                                "-Dans l'intelligence artificielle 🤖"
+                                "- Dans l'intelligence artificielle 🤖"
                             ).append(
-                                "-Dans l'économie 💱"
+                                "- Dans l'économie 💱"
                             ).out(),
                         }
                     ),
@@ -157,11 +173,11 @@ public class NavTree
                             ).appendN(
                                 ""
                             ).appendN(
-                                "-Dans la mécanique 👨🏻‍🔧"
+                                "- Dans la mécanique 👨🏻‍🔧"
                             ).appendN(
-                                "-Dans l'intelligence artificielle 🤖"
+                                "- Dans l'intelligence artificielle 🤖"
                             ).append(
-                                "-Dans l'économie 💱"
+                                "- Dans l'économie 💱"
                             ).out(),
                         }
                     ),
@@ -216,14 +232,14 @@ public class NavTree
                             ).appendN(
                                 ""
                             ).appendN(
-                                "-Production d'engin de jeux vidéo 💻"
+                                "- Production d'engin de jeux vidéo 💻"
                             ).appendN(
-                                "-Science de données 📊"
+                                "- Science de données 📊"
                             )
                             .appendN(
-                                "-En économie 💲"
+                                "- En économie 💲"
                             ).append(
-                                "-En biologie 🔬"
+                                "- En biologie 🔬"
                             ).out(),
                         }
                     ),
@@ -295,12 +311,12 @@ public class NavTree
                             ).appendN(
                                 "signifie que ces entrées subissent des conditions. Voiçi une liste d'opérateur logique"
                             ).appendN(
-                                "-AND ($\\cdot$) -> vrai ( 1 ) lorsque les deux valeurs sont vraies."
+                                "- AND ($\\cdot$) -> vrai ( 1 ) lorsque les deux valeurs sont vraies."
                             ).appendN(
                                 // can't seem to find the OR symbol with latex
-                                "-OR ($+$) -> vrai lorsque au moins une des entrées est vraie." 
+                                "- OR ($+$) -> vrai lorsque au moins une des entrées est vraie." 
                             ).append(
-                                "-XOR ($\\oplus$) -> vrai lorsque au plus une des entrées est vraie."
+                                "- XOR ($\\oplus$) -> vrai lorsque au plus une des entrées est vraie."
                             ).out(),
                         }
                     ),

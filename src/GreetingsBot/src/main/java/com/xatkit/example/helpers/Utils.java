@@ -1,5 +1,7 @@
 package com.xatkit.example.helpers;
 
+
+import java.net.*;
 import java.util.*;
 import com.xatkit.example.helpers.Tuteur;
 
@@ -91,7 +93,7 @@ public final class Utils
         int length = quotes.length;
         int rdmIdx = ( int ) Math.random() * length;
 
-        return "``" + quotes[rdmIdx] + "``";
+        return "**``" + quotes[rdmIdx] + "``**";
     }
 
     public static List<String> listeMatiereChimie ()
@@ -106,12 +108,8 @@ public final class Utils
 
         list.add ( MATH_CALC_I   );
         list.add ( MATH_CALC_II  );
+        list.add ( MATH_ALGEBRE_LIN );
         list.add ( MATH_DISCRETE );
-        // list.add ( "C'est quoi une matrice ?" );
-        // list.add ( "Comment multiplier deux matrice ?" );
-        // list.add ( "Qu'est ce que la transposée d'une matrice ?" );
-        // list.add ( "Comment diviser deux matrices ? " );
-        // list.add ( "")
 
         return list;
     }
@@ -143,25 +141,35 @@ public final class Utils
     // }
 
 
-    public static final String MATH          = "Mathématiques📐";
-    public static final String MATH_CALC_I   = "Calculus I🍎";
-    public static final String MATH_ALGEBRE_LIN = "Algèbre linéaire🕹️";
-    public static final String MATH_CALC_II  = "Calculus II∫";
-    public static final String MATH_DISCRETE = "Mathématiques discrètes🤫";
+    public static final String MATH              = "Mathématiques📐";
+    public static final String MATH_CALC_I       = "Calculus I🍎";
+    public static final String MATH_ALGEBRE_LIN  = "Algèbre linéaire🕹️";
+    public static final String MATH_CALC_II      = "Calculus II∫";
+    public static final String MATH_DISCRETE     = "Mathématiques discrètes🤫";
 
-    public static final String CHIMIE = "Chimie🧪";
-    public static final String PHYS   = "Physique⚛️";
+    public static final String CHIMIE            = "Chimie🧪";
+    public static final String PHYS              = "Physique⚛️";
 
-    public static final String I_HAVE_QUESTION = "J'ai une question🧐";
-    public static final String I_NEED_TUTOR    = "J'ai besoin d'un tuteur🧑‍🏫";
-    public static final String I_HAVE_SUGG     = "J'ai une suggestion💡";
+    public static final String I_HAVE_QUESTION   = "J'ai une question🧐";
+    public static final String DISCUTONS         = "Discutons☕";
+    public static final String I_NEED_TUTOR      = "J'ai besoin d'un tuteur🧑‍🏫";
+    public static final String I_HAVE_SUGG       = "J'ai une suggestion💡";
 
-    public static List<String> prompt_helper ()
+    public static final String VIE_PROFESSIONELLE="Astuces de la vie🛤️";
+    public static final String PHILOSOPHIE       = "Quelques philosophies intéressantes📜";
+    public static final String MES_ORIGINES      = "Quelles sont mes origines🔎";
+
+    public static final String QUITTER_MENU      = "Quitter le Menu✌️";
+
+    public static List<String> prompt_helper ( )
     {
         List<String> ret = new ArrayList<String>();
         ret.add ( I_HAVE_QUESTION );
         ret.add ( I_NEED_TUTOR);
         ret.add ( I_HAVE_SUGG );
+        ret.add ( DISCUTONS   );
+        ret.add ( QUITTER_MENU );
+
         return ret;
     }
 
@@ -175,5 +183,38 @@ public final class Utils
 
         return ret;
     }
+
+
+    // todo.
+    // https://stackoverflow.com/questions/3324717/sending-http-post-request-in-java
+    private static final String url = "https://github.com/enyoos/aerobot/issues";
+    public static String TOKEN = ""; // to change after
+
+    public static void saveSugg( String sugg ) {
+
+    //     URL url                = new URL(url);
+    //     URLConnection con      = url.openConnection();
+    //     HttpURLConnection http = (HttpURLConnection)con;
+
+    //     http.setRequestMethod("POST"); // PUT is another valid option
+    //     http.setDoOutput(true);
+        
+    //     Map<String,String> arguments = new HashMap<>();
+
+    //     arguments.put("username", "root");
+    //     arguments.put("password", "sjh76HSn!"); // This is a fake password obviously
+
+    //     StringJoiner sj = new StringJoiner("&");
+    //     for(Map.Entry<String,String> entry : arguments.entrySet()){
+    //         sj.add(URLEncoder.encode(entry.getKey(), "UTF-8") + "=" 
+    //             + URLEncoder.encode(entry.getValue(), "UTF-8"));
+    //     }
+
+    //     byte[] out = sj.toString().getBytes(StandardCharsets.UTF_8);
+    //     int length = out.length;
+
+        return;
+    }
+    // todo
 
 }
