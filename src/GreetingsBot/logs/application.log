@@ -21146,3 +21146,666 @@ java.net.SocketException: socket closed
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_372-372]
 	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
 2024-02-28 22:49:56 INFO  SocketIO server stopped
+2024-02-29 18:11:10 INFO  Starting XatkitBot with configuration:
+xatkit.intent.provider=com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider
+xatkit.nlpjs.agentId=default
+xatkit.nlpjs.language=en
+xatkit.nlpjs.server=http://localhost:8080
+sun.cpu.isalist=amd64
+sun.desktop=windows
+sun.stdout.encoding=cp850
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+file.separator=\
+maven.home=C:\Program Files\apache-maven-3.9.5
+java.specification.maintenance.version=4
+java.vendor=OpenLogic-OpenJDK
+sun.stderr.encoding=cp850
+sun.boot.class.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\resources.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\rt.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jsse.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jce.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\charsets.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jfr.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\classes
+java.ext.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+java.version=1.8.0_372-372
+java.vm.info=mixed mode
+awt.toolkit=sun.awt.windows.WToolkit
+user.language=en
+java.specification.vendor=Oracle Corporation
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher exec:java -Dexec.mainClass=com.xatkit.example.GreetingsBot
+java.home=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre
+sun.arch.data.model=64
+java.vm.specification.version=1.8
+java.class.path=C:\Program Files\apache-maven-3.9.5\boot\plexus-classworlds-2.7.0.jar
+user.name=ilyas
+file.encoding=Cp1252
+java.specification.version=1.8
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+user.timezone=America/New_York
+user.home=C:\Users\ilyas
+library.jansi.path=C:\Program Files\apache-maven-3.9.5\lib\jansi-native
+os.version=10.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+maven.conf=C:\Program Files\apache-maven-3.9.5/conf
+java.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Git\cmd;C:\msys64\mingw64\bin;C:\Users\ilyas\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\ilyas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\xmrig-6.20.0;C:\Program Files\monero-x86_64-w64-mingw32-v0.18.2.2;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files (x86)\Gpg4win\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.2.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Vim\vim91;C:\Program Files\Emacs\emacs-29.0.92\emacs-29.1\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Program Files\VSCodium\bin;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\Program Files\scripts;C:\Users\ilyas\miniconda3\Library\bin;C:\Users\ilyas\miniconda3\Scripts;C:\Python27;C:\Python27\Scripts;;.
+sun.jnu.encoding=Cp1252
+classworlds.conf=C:\Program Files\apache-maven-3.9.5\bin\m2.conf
+os.name=Windows 11
+user.variant=
+java.vm.specification.vendor=Oracle Corporation
+java.io.tmpdir=C:\Users\ilyas\AppData\Local\Temp\
+line.separator=
+
+java.endorsed.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\endorsed
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.runtime.version=1.8.0_372-372-b07
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+user.country=US
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.name=OpenJDK 64-Bit Server VM
+file.encoding.pkg=sun.io
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+maven.multiModuleProjectDirectory=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+exec.mainClass=com.xatkit.example.GreetingsBot
+sun.boot.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\bin
+java.vm.version=25.372-b07
+java.runtime.name=OpenJDK Runtime Environment
+2024-02-29 18:11:10 INFO  Starting NLP.js Client
+2024-02-29 18:11:11 INFO  Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2024-02-29 18:11:11 INFO  SocketIO server started at port: 5001
+2024-02-29 18:11:11 INFO  Registered REST handler  at URI /admin (method=GET)
+2024-02-29 18:11:11 INFO  Registered REST handler  at URI /admin/css/xatkit.min.css (method=GET)
+2024-02-29 18:11:11 INFO  Registered REST handler  at URI /admin/js/xatkit.min.js (method=GET)
+2024-02-29 18:11:11 INFO  Starting ReactEventProvider
+2024-02-29 18:11:11 INFO  Starting ReactIntentProvider
+2024-02-29 18:11:11 INFO  Registering execution rule events
+2024-02-29 18:11:11 INFO  Starting NLP.js agent training (this may take a few minutes)
+2024-02-29 18:11:13 INFO  NLP.js agent trained.
+2024-02-29 18:11:13 INFO  Starting XatkitServer
+2024-02-29 18:11:13 INFO  Registered REST handler  at URI /status (method=GET)
+2024-02-29 18:11:13 INFO  XatkitServer started, listening on port 5,000
+2024-02-29 18:11:13 INFO  Xatkit bot started
+2024-02-29 18:11:17 INFO  Detected Intent HowAreYou (confidence 0.292) from query text "Salut comment tuvas  ?"
+2024-02-29 18:11:45 INFO  Detected Intent Sad (confidence 1) from query text "Je ne vais pas trop bien  ?"
+2024-02-29 18:12:29 INFO  Detected Intent AnyValue (confidence 1) from query text "J'ai une question?"
+Intent Parameters: {value="J'ai une question?"}
+2024-02-29 18:12:30 INFO  Detected Intent AnyValue (confidence 1) from query text "Mathématiques?"
+Intent Parameters: {value="Mathématiques?"}
+2024-02-29 18:12:31 INFO  Detected Intent AnyValue (confidence 1) from query text "Calculus I?"
+Intent Parameters: {value="Calculus I?"}
+2024-02-29 18:12:32 INFO  Detected Intent AnyValue (confidence 1) from query text "Quelle est l'application de l'algèbre linéaire  ?"
+Intent Parameters: {value="Quelle est l'application de l'algèbre linéaire"}
+2024-02-29 18:19:39 INFO  Stopping SocketIO server
+2024-02-29 18:19:39 ERROR null
+java.net.SocketException: socket closed
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method) ~[?:1.8.0_372-372]
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131) ~[?:1.8.0_372-372]
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409) ~[?:1.8.0_372-372]
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.implAccept(ServerSocket.java:560) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.accept(ServerSocket.java:528) ~[?:1.8.0_372-372]
+	at org.apache.http.impl.bootstrap.RequestListener.run(RequestListener.java:74) [httpcore-4.4.10.jar:4.4.10]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_372-372]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_372-372]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-02-29 18:19:43 INFO  SocketIO server stopped
+2024-02-29 18:20:33 INFO  Starting XatkitBot with configuration:
+xatkit.intent.provider=com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider
+xatkit.nlpjs.agentId=default
+xatkit.nlpjs.language=en
+xatkit.nlpjs.server=http://localhost:8080
+sun.cpu.isalist=amd64
+sun.desktop=windows
+sun.stdout.encoding=cp850
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+file.separator=\
+maven.home=C:\Program Files\apache-maven-3.9.5
+java.specification.maintenance.version=4
+java.vendor=OpenLogic-OpenJDK
+sun.stderr.encoding=cp850
+sun.boot.class.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\resources.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\rt.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jsse.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jce.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\charsets.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jfr.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\classes
+java.ext.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+java.version=1.8.0_372-372
+java.vm.info=mixed mode
+awt.toolkit=sun.awt.windows.WToolkit
+user.language=en
+java.specification.vendor=Oracle Corporation
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher exec:java -Dexec.mainClass=com.xatkit.example.GreetingsBot
+java.home=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre
+sun.arch.data.model=64
+java.vm.specification.version=1.8
+java.class.path=C:\Program Files\apache-maven-3.9.5\boot\plexus-classworlds-2.7.0.jar
+user.name=ilyas
+file.encoding=Cp1252
+java.specification.version=1.8
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+user.timezone=America/New_York
+user.home=C:\Users\ilyas
+library.jansi.path=C:\Program Files\apache-maven-3.9.5\lib\jansi-native
+os.version=10.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+maven.conf=C:\Program Files\apache-maven-3.9.5/conf
+java.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Git\cmd;C:\msys64\mingw64\bin;C:\Users\ilyas\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\ilyas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\xmrig-6.20.0;C:\Program Files\monero-x86_64-w64-mingw32-v0.18.2.2;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files (x86)\Gpg4win\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.2.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Vim\vim91;C:\Program Files\Emacs\emacs-29.0.92\emacs-29.1\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Program Files\VSCodium\bin;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\Program Files\scripts;C:\Users\ilyas\miniconda3\Library\bin;C:\Users\ilyas\miniconda3\Scripts;C:\Python27;C:\Python27\Scripts;;.
+sun.jnu.encoding=Cp1252
+classworlds.conf=C:\Program Files\apache-maven-3.9.5\bin\m2.conf
+os.name=Windows 11
+user.variant=
+java.vm.specification.vendor=Oracle Corporation
+java.io.tmpdir=C:\Users\ilyas\AppData\Local\Temp\
+line.separator=
+
+java.endorsed.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\endorsed
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.runtime.version=1.8.0_372-372-b07
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+user.country=US
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.name=OpenJDK 64-Bit Server VM
+file.encoding.pkg=sun.io
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+maven.multiModuleProjectDirectory=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+exec.mainClass=com.xatkit.example.GreetingsBot
+sun.boot.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\bin
+java.vm.version=25.372-b07
+java.runtime.name=OpenJDK Runtime Environment
+2024-02-29 18:20:33 INFO  Starting NLP.js Client
+2024-02-29 18:20:33 INFO  Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2024-02-29 18:20:33 INFO  SocketIO server started at port: 5001
+2024-02-29 18:20:33 INFO  Registered REST handler  at URI /admin (method=GET)
+2024-02-29 18:20:33 INFO  Registered REST handler  at URI /admin/css/xatkit.min.css (method=GET)
+2024-02-29 18:20:33 INFO  Registered REST handler  at URI /admin/js/xatkit.min.js (method=GET)
+2024-02-29 18:20:33 INFO  Starting ReactEventProvider
+2024-02-29 18:20:33 INFO  Starting ReactIntentProvider
+2024-02-29 18:20:33 INFO  Registering execution rule events
+2024-02-29 18:20:34 INFO  Starting NLP.js agent training (this may take a few minutes)
+2024-02-29 18:20:36 INFO  NLP.js agent trained.
+2024-02-29 18:20:36 INFO  Starting XatkitServer
+2024-02-29 18:20:36 INFO  Registered REST handler  at URI /status (method=GET)
+2024-02-29 18:20:36 INFO  XatkitServer started, listening on port 5,000
+2024-02-29 18:20:36 INFO  Xatkit bot started
+2024-02-29 18:20:46 INFO  Detected Intent Sad (confidence 0.992) from query text "Je vais vraiment trop bien."
+2024-02-29 18:24:50 INFO  Detected Intent Happy (confidence 0.981) from query text "Je vais bien."
+2024-02-29 18:24:50 ERROR An error occurred when running the actions associated to the event Happy. Check the logs for additional information
+2024-02-29 18:24:50 ERROR java.util.concurrent.CompletionException: java.lang.IllegalStateException: Found several navigable transitions (2), cannot decide which one to navigate
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1643)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalStateException: Found several navigable transitions (2), cannot decide which one to navigate
+	at com.xatkit.core.ExecutionService.getNavigableTransitions(ExecutionService.java:208)
+	at com.xatkit.core.ExecutionService.lambda$handleEventInstance$0(ExecutionService.java:237)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1640)
+	... 3 more
+
+2024-02-29 18:25:32 INFO  Detected Intent Sad (confidence 0.999) from query text "Je me sens bien."
+2024-02-29 18:26:05 INFO  Stopping SocketIO server
+2024-02-29 18:26:05 ERROR null
+java.net.SocketException: socket closed
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method) ~[?:1.8.0_372-372]
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131) ~[?:1.8.0_372-372]
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409) ~[?:1.8.0_372-372]
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.implAccept(ServerSocket.java:560) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.accept(ServerSocket.java:528) ~[?:1.8.0_372-372]
+	at org.apache.http.impl.bootstrap.RequestListener.run(RequestListener.java:74) [httpcore-4.4.10.jar:4.4.10]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_372-372]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_372-372]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-02-29 18:26:09 INFO  SocketIO server stopped
+2024-02-29 18:26:18 INFO  Starting XatkitBot with configuration:
+xatkit.intent.provider=com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider
+xatkit.nlpjs.agentId=default
+xatkit.nlpjs.language=en
+xatkit.nlpjs.server=http://localhost:8080
+sun.cpu.isalist=amd64
+sun.desktop=windows
+sun.stdout.encoding=cp850
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+file.separator=\
+maven.home=C:\Program Files\apache-maven-3.9.5
+java.specification.maintenance.version=4
+java.vendor=OpenLogic-OpenJDK
+sun.stderr.encoding=cp850
+sun.boot.class.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\resources.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\rt.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jsse.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jce.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\charsets.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jfr.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\classes
+java.ext.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+java.version=1.8.0_372-372
+java.vm.info=mixed mode
+awt.toolkit=sun.awt.windows.WToolkit
+user.language=en
+java.specification.vendor=Oracle Corporation
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher exec:java -Dexec.mainClass=com.xatkit.example.GreetingsBot
+java.home=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre
+sun.arch.data.model=64
+java.vm.specification.version=1.8
+java.class.path=C:\Program Files\apache-maven-3.9.5\boot\plexus-classworlds-2.7.0.jar
+user.name=ilyas
+file.encoding=Cp1252
+java.specification.version=1.8
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+user.timezone=America/New_York
+user.home=C:\Users\ilyas
+library.jansi.path=C:\Program Files\apache-maven-3.9.5\lib\jansi-native
+os.version=10.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+maven.conf=C:\Program Files\apache-maven-3.9.5/conf
+java.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Git\cmd;C:\msys64\mingw64\bin;C:\Users\ilyas\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\ilyas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\xmrig-6.20.0;C:\Program Files\monero-x86_64-w64-mingw32-v0.18.2.2;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files (x86)\Gpg4win\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.2.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Vim\vim91;C:\Program Files\Emacs\emacs-29.0.92\emacs-29.1\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Program Files\VSCodium\bin;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\Program Files\scripts;C:\Users\ilyas\miniconda3\Library\bin;C:\Users\ilyas\miniconda3\Scripts;C:\Python27;C:\Python27\Scripts;;.
+sun.jnu.encoding=Cp1252
+classworlds.conf=C:\Program Files\apache-maven-3.9.5\bin\m2.conf
+os.name=Windows 11
+user.variant=
+java.vm.specification.vendor=Oracle Corporation
+java.io.tmpdir=C:\Users\ilyas\AppData\Local\Temp\
+line.separator=
+
+java.endorsed.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\endorsed
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.runtime.version=1.8.0_372-372-b07
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+user.country=US
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.name=OpenJDK 64-Bit Server VM
+file.encoding.pkg=sun.io
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+maven.multiModuleProjectDirectory=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+exec.mainClass=com.xatkit.example.GreetingsBot
+sun.boot.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\bin
+java.vm.version=25.372-b07
+java.runtime.name=OpenJDK Runtime Environment
+2024-02-29 18:26:18 INFO  Starting NLP.js Client
+2024-02-29 18:26:19 INFO  Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2024-02-29 18:26:19 INFO  SocketIO server started at port: 5001
+2024-02-29 18:26:19 INFO  Registered REST handler  at URI /admin (method=GET)
+2024-02-29 18:26:19 INFO  Registered REST handler  at URI /admin/css/xatkit.min.css (method=GET)
+2024-02-29 18:26:19 INFO  Registered REST handler  at URI /admin/js/xatkit.min.js (method=GET)
+2024-02-29 18:26:19 INFO  Starting ReactEventProvider
+2024-02-29 18:26:19 INFO  Starting ReactIntentProvider
+2024-02-29 18:26:19 INFO  Registering execution rule events
+2024-02-29 18:26:19 INFO  Starting NLP.js agent training (this may take a few minutes)
+2024-02-29 18:26:21 INFO  NLP.js agent trained.
+2024-02-29 18:26:21 INFO  Starting XatkitServer
+2024-02-29 18:26:21 INFO  Registered REST handler  at URI /status (method=GET)
+2024-02-29 18:26:21 INFO  XatkitServer started, listening on port 5,000
+2024-02-29 18:26:21 INFO  Xatkit bot started
+2024-02-29 18:26:33 INFO  Detected Intent Happy (confidence 0.994) from query text "je vais bien."
+2024-02-29 18:26:33 ERROR An error occurred when running the actions associated to the event Happy. Check the logs for additional information
+2024-02-29 18:26:33 ERROR java.util.concurrent.CompletionException: java.lang.IllegalStateException: Found several navigable transitions (2), cannot decide which one to navigate
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1643)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalStateException: Found several navigable transitions (2), cannot decide which one to navigate
+	at com.xatkit.core.ExecutionService.getNavigableTransitions(ExecutionService.java:208)
+	at com.xatkit.core.ExecutionService.lambda$handleEventInstance$0(ExecutionService.java:237)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1640)
+	... 3 more
+
+2024-02-29 18:26:39 INFO  Detected Intent Sad (confidence 1) from query text "Je me sens bien."
+2024-02-29 18:26:46 INFO  Detected Intent Happy (confidence 1) from query text "je suis heureux."
+2024-02-29 18:26:46 ERROR An error occurred when running the actions associated to the event Happy. Check the logs for additional information
+2024-02-29 18:26:46 ERROR java.util.concurrent.CompletionException: java.lang.IllegalStateException: Found several navigable transitions (2), cannot decide which one to navigate
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1643)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalStateException: Found several navigable transitions (2), cannot decide which one to navigate
+	at com.xatkit.core.ExecutionService.getNavigableTransitions(ExecutionService.java:208)
+	at com.xatkit.core.ExecutionService.lambda$handleEventInstance$0(ExecutionService.java:237)
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1640)
+	... 3 more
+
+2024-02-29 18:27:46 INFO  Stopping SocketIO server
+2024-02-29 18:27:46 ERROR null
+java.net.SocketException: socket closed
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method) ~[?:1.8.0_372-372]
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131) ~[?:1.8.0_372-372]
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409) ~[?:1.8.0_372-372]
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.implAccept(ServerSocket.java:560) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.accept(ServerSocket.java:528) ~[?:1.8.0_372-372]
+	at org.apache.http.impl.bootstrap.RequestListener.run(RequestListener.java:74) [httpcore-4.4.10.jar:4.4.10]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_372-372]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_372-372]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-02-29 18:27:51 INFO  SocketIO server stopped
+2024-02-29 18:28:00 INFO  Starting XatkitBot with configuration:
+xatkit.intent.provider=com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider
+xatkit.nlpjs.agentId=default
+xatkit.nlpjs.language=en
+xatkit.nlpjs.server=http://localhost:8080
+sun.cpu.isalist=amd64
+sun.desktop=windows
+sun.stdout.encoding=cp850
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+file.separator=\
+maven.home=C:\Program Files\apache-maven-3.9.5
+java.specification.maintenance.version=4
+java.vendor=OpenLogic-OpenJDK
+sun.stderr.encoding=cp850
+sun.boot.class.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\resources.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\rt.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jsse.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jce.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\charsets.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jfr.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\classes
+java.ext.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+java.version=1.8.0_372-372
+java.vm.info=mixed mode
+awt.toolkit=sun.awt.windows.WToolkit
+user.language=en
+java.specification.vendor=Oracle Corporation
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher exec:java -Dexec.mainClass=com.xatkit.example.GreetingsBot
+java.home=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre
+sun.arch.data.model=64
+java.vm.specification.version=1.8
+java.class.path=C:\Program Files\apache-maven-3.9.5\boot\plexus-classworlds-2.7.0.jar
+user.name=ilyas
+file.encoding=Cp1252
+java.specification.version=1.8
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+user.timezone=America/New_York
+user.home=C:\Users\ilyas
+library.jansi.path=C:\Program Files\apache-maven-3.9.5\lib\jansi-native
+os.version=10.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+maven.conf=C:\Program Files\apache-maven-3.9.5/conf
+java.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Git\cmd;C:\msys64\mingw64\bin;C:\Users\ilyas\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\ilyas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\xmrig-6.20.0;C:\Program Files\monero-x86_64-w64-mingw32-v0.18.2.2;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files (x86)\Gpg4win\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.2.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Vim\vim91;C:\Program Files\Emacs\emacs-29.0.92\emacs-29.1\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Program Files\VSCodium\bin;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\Program Files\scripts;C:\Users\ilyas\miniconda3\Library\bin;C:\Users\ilyas\miniconda3\Scripts;C:\Python27;C:\Python27\Scripts;;.
+sun.jnu.encoding=Cp1252
+classworlds.conf=C:\Program Files\apache-maven-3.9.5\bin\m2.conf
+os.name=Windows 11
+user.variant=
+java.vm.specification.vendor=Oracle Corporation
+java.io.tmpdir=C:\Users\ilyas\AppData\Local\Temp\
+line.separator=
+
+java.endorsed.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\endorsed
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.runtime.version=1.8.0_372-372-b07
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+user.country=US
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.name=OpenJDK 64-Bit Server VM
+file.encoding.pkg=sun.io
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+maven.multiModuleProjectDirectory=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+exec.mainClass=com.xatkit.example.GreetingsBot
+sun.boot.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\bin
+java.vm.version=25.372-b07
+java.runtime.name=OpenJDK Runtime Environment
+2024-02-29 18:28:00 INFO  Starting NLP.js Client
+2024-02-29 18:28:00 INFO  Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2024-02-29 18:28:00 INFO  SocketIO server started at port: 5001
+2024-02-29 18:28:00 INFO  Registered REST handler  at URI /admin (method=GET)
+2024-02-29 18:28:00 INFO  Registered REST handler  at URI /admin/css/xatkit.min.css (method=GET)
+2024-02-29 18:28:00 INFO  Registered REST handler  at URI /admin/js/xatkit.min.js (method=GET)
+2024-02-29 18:28:00 INFO  Starting ReactEventProvider
+2024-02-29 18:28:00 INFO  Starting ReactIntentProvider
+2024-02-29 18:28:00 INFO  Registering execution rule events
+2024-02-29 18:28:00 INFO  Starting NLP.js agent training (this may take a few minutes)
+2024-02-29 18:28:03 INFO  NLP.js agent trained.
+2024-02-29 18:28:03 INFO  Starting XatkitServer
+2024-02-29 18:28:03 INFO  Registered REST handler  at URI /status (method=GET)
+2024-02-29 18:28:03 INFO  XatkitServer started, listening on port 5,000
+2024-02-29 18:28:03 INFO  Xatkit bot started
+2024-02-29 18:28:08 INFO  Detected Intent Sad (confidence 0.584) from query text "Je vais super."
+2024-02-29 18:28:59 INFO  Stopping SocketIO server
+2024-02-29 18:28:59 ERROR null
+java.net.SocketException: socket closed
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method) ~[?:1.8.0_372-372]
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131) ~[?:1.8.0_372-372]
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409) ~[?:1.8.0_372-372]
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.implAccept(ServerSocket.java:560) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.accept(ServerSocket.java:528) ~[?:1.8.0_372-372]
+	at org.apache.http.impl.bootstrap.RequestListener.run(RequestListener.java:74) [httpcore-4.4.10.jar:4.4.10]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_372-372]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_372-372]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-02-29 18:29:03 INFO  SocketIO server stopped
+2024-02-29 18:29:16 INFO  Starting XatkitBot with configuration:
+xatkit.intent.provider=com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider
+xatkit.nlpjs.agentId=default
+xatkit.nlpjs.language=en
+xatkit.nlpjs.server=http://localhost:8080
+sun.cpu.isalist=amd64
+sun.desktop=windows
+sun.stdout.encoding=cp850
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+file.separator=\
+maven.home=C:\Program Files\apache-maven-3.9.5
+java.specification.maintenance.version=4
+java.vendor=OpenLogic-OpenJDK
+sun.stderr.encoding=cp850
+sun.boot.class.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\resources.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\rt.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jsse.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jce.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\charsets.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jfr.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\classes
+java.ext.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+java.version=1.8.0_372-372
+java.vm.info=mixed mode
+awt.toolkit=sun.awt.windows.WToolkit
+user.language=en
+java.specification.vendor=Oracle Corporation
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher exec:java -Dexec.mainClass=com.xatkit.example.GreetingsBot
+java.home=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre
+sun.arch.data.model=64
+java.vm.specification.version=1.8
+java.class.path=C:\Program Files\apache-maven-3.9.5\boot\plexus-classworlds-2.7.0.jar
+user.name=ilyas
+file.encoding=Cp1252
+java.specification.version=1.8
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+user.timezone=America/New_York
+user.home=C:\Users\ilyas
+library.jansi.path=C:\Program Files\apache-maven-3.9.5\lib\jansi-native
+os.version=10.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+maven.conf=C:\Program Files\apache-maven-3.9.5/conf
+java.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Git\cmd;C:\msys64\mingw64\bin;C:\Users\ilyas\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\ilyas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\xmrig-6.20.0;C:\Program Files\monero-x86_64-w64-mingw32-v0.18.2.2;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files (x86)\Gpg4win\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.2.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Vim\vim91;C:\Program Files\Emacs\emacs-29.0.92\emacs-29.1\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Program Files\VSCodium\bin;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\Program Files\scripts;C:\Users\ilyas\miniconda3\Library\bin;C:\Users\ilyas\miniconda3\Scripts;C:\Python27;C:\Python27\Scripts;;.
+sun.jnu.encoding=Cp1252
+classworlds.conf=C:\Program Files\apache-maven-3.9.5\bin\m2.conf
+os.name=Windows 11
+user.variant=
+java.vm.specification.vendor=Oracle Corporation
+java.io.tmpdir=C:\Users\ilyas\AppData\Local\Temp\
+line.separator=
+
+java.endorsed.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\endorsed
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.runtime.version=1.8.0_372-372-b07
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+user.country=US
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.name=OpenJDK 64-Bit Server VM
+file.encoding.pkg=sun.io
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+maven.multiModuleProjectDirectory=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+exec.mainClass=com.xatkit.example.GreetingsBot
+sun.boot.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\bin
+java.vm.version=25.372-b07
+java.runtime.name=OpenJDK Runtime Environment
+2024-02-29 18:29:16 INFO  Starting NLP.js Client
+2024-02-29 18:29:16 INFO  Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2024-02-29 18:29:16 INFO  SocketIO server started at port: 5001
+2024-02-29 18:29:16 INFO  Registered REST handler  at URI /admin (method=GET)
+2024-02-29 18:29:16 INFO  Registered REST handler  at URI /admin/css/xatkit.min.css (method=GET)
+2024-02-29 18:29:16 INFO  Registered REST handler  at URI /admin/js/xatkit.min.js (method=GET)
+2024-02-29 18:29:16 INFO  Starting ReactEventProvider
+2024-02-29 18:29:16 INFO  Starting ReactIntentProvider
+2024-02-29 18:29:16 INFO  Registering execution rule events
+2024-02-29 18:29:17 INFO  Starting NLP.js agent training (this may take a few minutes)
+2024-02-29 18:29:19 INFO  NLP.js agent trained.
+2024-02-29 18:29:19 INFO  Starting XatkitServer
+2024-02-29 18:29:19 INFO  Registered REST handler  at URI /status (method=GET)
+2024-02-29 18:29:19 INFO  XatkitServer started, listening on port 5,000
+2024-02-29 18:29:19 INFO  Xatkit bot started
+2024-02-29 18:29:28 INFO  Detected Intent Happy (confidence 0.766) from query text "Je vais bien."
+2024-02-29 18:55:47 INFO  Stopping SocketIO server
+2024-02-29 18:55:47 ERROR null
+java.net.SocketException: socket closed
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method) ~[?:1.8.0_372-372]
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131) ~[?:1.8.0_372-372]
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409) ~[?:1.8.0_372-372]
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.implAccept(ServerSocket.java:560) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.accept(ServerSocket.java:528) ~[?:1.8.0_372-372]
+	at org.apache.http.impl.bootstrap.RequestListener.run(RequestListener.java:74) [httpcore-4.4.10.jar:4.4.10]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_372-372]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_372-372]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-02-29 18:55:51 INFO  SocketIO server stopped
+2024-02-29 19:07:12 INFO  Starting XatkitBot with configuration:
+xatkit.intent.provider=com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider
+xatkit.nlpjs.agentId=default
+xatkit.nlpjs.language=en
+xatkit.nlpjs.server=http://localhost:8080
+sun.cpu.isalist=amd64
+sun.desktop=windows
+sun.stdout.encoding=cp850
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+file.separator=\
+maven.home=C:\Program Files\apache-maven-3.9.5
+java.specification.maintenance.version=4
+java.vendor=OpenLogic-OpenJDK
+sun.stderr.encoding=cp850
+sun.boot.class.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\resources.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\rt.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jsse.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jce.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\charsets.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jfr.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\classes
+java.ext.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+java.version=1.8.0_372-372
+java.vm.info=mixed mode
+awt.toolkit=sun.awt.windows.WToolkit
+user.language=en
+java.specification.vendor=Oracle Corporation
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher exec:java -Dexec.mainClass=com.xatkit.example.GreetingsBot
+java.home=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre
+sun.arch.data.model=64
+java.vm.specification.version=1.8
+java.class.path=C:\Program Files\apache-maven-3.9.5\boot\plexus-classworlds-2.7.0.jar
+user.name=ilyas
+file.encoding=Cp1252
+java.specification.version=1.8
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+user.timezone=America/New_York
+user.home=C:\Users\ilyas
+library.jansi.path=C:\Program Files\apache-maven-3.9.5\lib\jansi-native
+os.version=10.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+maven.conf=C:\Program Files\apache-maven-3.9.5/conf
+java.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Git\cmd;C:\msys64\mingw64\bin;C:\Users\ilyas\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\ilyas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\xmrig-6.20.0;C:\Program Files\monero-x86_64-w64-mingw32-v0.18.2.2;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files (x86)\Gpg4win\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.2.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Vim\vim91;C:\Program Files\Emacs\emacs-29.0.92\emacs-29.1\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Program Files\VSCodium\bin;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\Program Files\scripts;C:\Users\ilyas\miniconda3\Library\bin;C:\Users\ilyas\miniconda3\Scripts;C:\Python27;C:\Python27\Scripts;;.
+sun.jnu.encoding=Cp1252
+classworlds.conf=C:\Program Files\apache-maven-3.9.5\bin\m2.conf
+os.name=Windows 11
+user.variant=
+java.vm.specification.vendor=Oracle Corporation
+java.io.tmpdir=C:\Users\ilyas\AppData\Local\Temp\
+line.separator=
+
+java.endorsed.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\endorsed
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.runtime.version=1.8.0_372-372-b07
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+user.country=US
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.name=OpenJDK 64-Bit Server VM
+file.encoding.pkg=sun.io
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+maven.multiModuleProjectDirectory=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+exec.mainClass=com.xatkit.example.GreetingsBot
+sun.boot.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\bin
+java.vm.version=25.372-b07
+java.runtime.name=OpenJDK Runtime Environment
+2024-02-29 19:07:12 INFO  Starting NLP.js Client
+2024-02-29 19:07:13 INFO  Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2024-02-29 19:07:13 INFO  SocketIO server started at port: 5001
+2024-02-29 19:07:13 INFO  Registered REST handler  at URI /admin (method=GET)
+2024-02-29 19:07:13 INFO  Registered REST handler  at URI /admin/css/xatkit.min.css (method=GET)
+2024-02-29 19:07:13 INFO  Registered REST handler  at URI /admin/js/xatkit.min.js (method=GET)
+2024-02-29 19:07:13 INFO  Starting ReactEventProvider
+2024-02-29 19:07:13 INFO  Starting ReactIntentProvider
+2024-02-29 19:07:13 INFO  Registering execution rule events
+2024-02-29 19:07:13 INFO  Starting NLP.js agent training (this may take a few minutes)
+2024-02-29 19:07:16 INFO  NLP.js agent trained.
+2024-02-29 19:07:16 INFO  Starting XatkitServer
+2024-02-29 19:07:16 INFO  Registered REST handler  at URI /status (method=GET)
+2024-02-29 19:07:16 INFO  XatkitServer started, listening on port 5,000
+2024-02-29 19:07:16 INFO  Xatkit bot started
+2024-02-29 19:07:31 INFO  Detected Intent Happy (confidence 0.766) from query text "Je vais bien."
+2024-02-29 19:07:42 INFO  Detected Intent AnyValue (confidence 1) from query text "Dit moi un fait interessant"
+Intent Parameters: {value="Dit moi un fait interessant"}
+2024-02-29 19:08:45 INFO  Detected Intent AnyValue (confidence 1) from query text "J'ai besoin d'un tuteur???"
+Intent Parameters: {value="J'ai besoin d'un tuteur???"}
+2024-02-29 19:08:46 INFO  Detected Intent AnyValue (confidence 1) from query text "Mathématiques?"
+Intent Parameters: {value="Mathématiques?"}
+2024-02-29 19:08:47 INFO  Detected Intent AnyValue (confidence 1) from query text "Omar?????"
+Intent Parameters: {value="Omar?????"}
+2024-02-29 19:10:03 INFO  Stopping SocketIO server
+2024-02-29 19:10:03 ERROR null
+java.net.SocketException: socket closed
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method) ~[?:1.8.0_372-372]
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131) ~[?:1.8.0_372-372]
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409) ~[?:1.8.0_372-372]
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.implAccept(ServerSocket.java:560) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.accept(ServerSocket.java:528) ~[?:1.8.0_372-372]
+	at org.apache.http.impl.bootstrap.RequestListener.run(RequestListener.java:74) [httpcore-4.4.10.jar:4.4.10]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_372-372]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_372-372]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-02-29 19:10:07 INFO  SocketIO server stopped

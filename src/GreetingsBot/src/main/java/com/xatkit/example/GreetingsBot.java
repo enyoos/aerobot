@@ -95,6 +95,7 @@ public class GreetingsBot {
                 val handleDiscussion    = state ( "handleFreeWill" );
                 val handleQuitMenu      = state ( "handleQuitMenu" );
                 val handleGreetings     = state ( "handleGreetings" );
+                val handleFaitInt       = state ( "handleFaitInt ");
 
 
                 init
@@ -112,21 +113,22 @@ public class GreetingsBot {
 
                 handleWelcome
                         .body(context -> {
-                                reactPlatform.reply(context, "Salut ! Je m'appelle 🔥roseBot🔥. Je suis enchanté de faire ta rencontre 😊!");
-                                reactPlatform.reply(context, "Comment vas-tu aujourd'hui ?!");
+                                reactPlatform.reply(context, "Salut ! Je m'appelle 🔥roseBot🔥");
+                                reactPlatform.reply(context, "Je suis enchanté/e de faire ta rencontre🤗");
+                                reactPlatform.reply(context, "Comment vas-tu aujourd'hui?");
                         })
                         .next()
                                 .when(intentIs(happy)).moveTo( handleHappy )
                                 .when(intentIs(cheat)).moveTo( handleCheat )
+                                .when(intentIs(menu)).moveTo( promptUser )
                                 .when(intentIs(howAreYou)).moveTo( handleWhatsUp )
-                                .when(intentIs( happy )).moveTo ( handleHappy )
                                 .when(intentIs( sad )).moveTo ( handleSad )
                         .fallback ( context -> {
                                 reactPlatform.reply ( context, "Eh, et alors ? 😵");
                         });
 
                 handleWhatsUp
-                        .body(context -> reactPlatform.reply(context, "Je vais bien ✅! Merci."))
+                        .body(context -> reactPlatform.reply(context, "Je vais bien💯 Merci."))
                         .next()
                         .moveTo ( promptUser );
 
@@ -144,45 +146,62 @@ public class GreetingsBot {
 
                 handleSad
                         .body( context -> {
-                                reactPlatform.reply(context, "Les temps sont très difficiles 😓. Voici une citation pour te motiver 💪");
+                                reactPlatform.reply(context, "Les temps sont très difficiles😓");
+                                reactPlatform.reply(context, "Voici une citation pour te motiver💪");
                                 reactPlatform.reply(context, giveMeQuote());
                         })
                         .next()
                         .moveTo(promptUser);
 
                 promptUser
-                        .body ( context -> reactPlatform.reply (context, asked ? "Besoin d'autre chose🤔" : "Comment puis-je t'aider aujourd'hui 🛠️?", prompt_helper()))
+                        .body ( context -> reactPlatform.reply (context, asked ? "Besoin d'autre chose🤔" : "Comment puis-je t'aider aujourd'hui 🛠️?", prompt_helper(asked)))
                         .next ( )
                                 .when ( intentIs( CoreLibrary.AnyValue ).and( context -> {
+                                        asked = true;
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         return clicked.equals( I_HAVE_QUESTION );
                                 })).moveTo( promptChooseSubject )
                                 .when( intentIs( CoreLibrary.AnyValue ).and( context -> {
+                                        asked = true;
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         return clicked.equals( I_NEED_TUTOR );
                                 })).moveTo ( handleBooking )
                                 .when( intentIs( CoreLibrary.AnyValue ).and( context -> {
+                                        asked = true;
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         return clicked.equals( I_HAVE_SUGG );
                                 })).moveTo( handleSuggestion )
                                 .when( intentIs ( CoreLibrary.AnyValue).and ( context -> {
+                                        asked = true;
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         return clicked.equals( DISCUTONS );
                                 })).moveTo ( handleDiscussion )
+                                .when(intentIs( CoreLibrary.AnyValue ).and( context -> {
+                                        asked = true;
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        return clicked.equals ( FAIT_INT );
+                                })).moveTo ( handleFaitInt )
                                 .when ( intentIs( CoreLibrary.AnyValue).and ( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         return clicked.equals( QUITTER_MENU );
                                 })).moveTo(handleQuitMenu);
 
+                handleFaitInt
+                        .body( context -> {
+                                reactPlatform.reply (context, "Savais-tu que " + giveMeFact() );
+                        })
+                        .next()
+                        .moveTo ( promptUser );
+
                 handleQuitMenu
                         .body (
-                                context -> reactPlatform.reply ( context, "Avec plaisir, n'hésite pas à m'envoyer le message *menu* pour faire apparaître ces choix." ) 
+                                context -> reactPlatform.reply ( context, "N'hésite pas à m'envoyer le message *menu* pour faire apparaître ces choix." ) 
                         )
                         .next()
                         .moveTo ( awaitingInput );
 
                 handleThankful
-                        .body( context -> reactPlatform.reply(context, "Avec plaisir 😊!"))
+                        .body( context -> reactPlatform.reply(context, "Avec plaisir 😊"))
                         .next()
                         .moveTo(awaitingInput);
 
@@ -326,8 +345,10 @@ public class GreetingsBot {
                 answerQuestion
                         .body ( context -> {
                                 asked    = true;
-                                String ret = tree.navigate(MATH).navigate(sub).navigate(question + " ?").nodes[0].header;
-                                reactPlatform.reply ( context, ret );
+                                Node rets[] = tree.navigate(MATH).navigate(sub).navigate(question + " ?").nodes;
+
+                                // response with batch_ans
+                                for ( Node ret :  rets ) { reactPlatform.reply ( context, ret.header ); }
                         })
                         .next ()
                         .moveTo ( promptUser );
@@ -342,7 +363,9 @@ public class GreetingsBot {
                                 })).moveTo( answerQuestion );
 
                 val defaultFallback = fallbackState()
-                        .body(context -> reactPlatform.reply(context, "Excuse-moi, mais je n'ai pas bien saisi 🤭."));
+                        .body(context -> {
+                                reactPlatform.reply(context, "Excuse-moi, mais je n'ai pas bien saisi🤭");
+                        });
 
                 val botModel = model()
                         .usePlatform(reactPlatform)

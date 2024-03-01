@@ -18,22 +18,6 @@ public class NavTree
             t.navigate( MATH ).navigate( MATH_CALC_I ).navigate ( "C'est quoi la dérivation ?" ).nodes[0].header );
     }
 
-    public static NavTree init_nav_discutons()
-    {
-        final int size = 3;        
-
-        Node[] nodes_ = new Node[size];
-
-        nodes_[0] = new Node(VIE_PROFESSIONELLE);
-
-        nodes_[1] = new Node(PHILOSOPHIE);
-
-        nodes_[2] = new Node(MES_ORIGINES);
-
-
-        return null;
-    }
-
     // inits the default nav3 
     public static NavTree init_nav_3 ( )
     {
@@ -227,11 +211,9 @@ public class NavTree
                     ),
                     new Node ("Quelle est l'application de l'algèbre linéaire ?").fillNodes (
                         new String[] {
-                            new CustomSb(
-                                "En voici quelques unes"
-                            ).appendN(
-                                ""
-                            ).appendN(
+                            "En voici quelques unes",
+                            new CustomSb()
+                            .appendN(
                                 "- Production d'engin de jeux vidéo 💻"
                             ).appendN(
                                 "- Science de données 📊"

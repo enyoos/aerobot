@@ -2,10 +2,23 @@ package com.xatkit.example.helpers;
 
 public final class Intents
 {
+
+    // des quantificateurs_ sont des adverbes.
+    private static String[] quantificateurs_ = {
+        "vraiment",
+        "absolument",
+        "trop",
+        "magnifiquement",
+        "superbement",
+        "extra",
+        "de plus en plus",
+        "sincerement",
+    };
+
     // on va les faire seulement pour les sentiments.
     public static String[] sad_       = {
         "Je ne vais pas trop bien...",
-        "Je me sens pas bien",
+        "Je ne me sens pas bien",
         "Je me sens mal",
         "Je suis triste.",
         "Je suis en depression",
@@ -23,7 +36,8 @@ public final class Intents
         "J'ai une boule dans la gorge",
         "J'ai envie de pleurer",
         "J'ai l'impression d'être petit",
-        "Burnout",
+        "J'ai un burnout",
+        "Je n'ai plus envie de travailler",
         "J'ai envie de me mettre en boule",
         "Je suis en PLS",
         "Je suis dégouté",
@@ -54,7 +68,6 @@ public final class Intents
 
     public static String[] joy_          = {
         "Je vais tres bien !",
-        "Je ne vais pas mal",
         "Je suis enchanté",
         "La vie me sourit",
         "Je suis extasié",
@@ -77,7 +90,10 @@ public final class Intents
         "Je suis de bonne humeur",
         "Je me suis lever du bon pied",
         "Je ne suis plus en depression",
+        "Je vais vraiment trop bien.",
+        "J'ai trop une belle vie",
         "Je suis heureux",
+        "Je suis vraiment heureux",
         "Je suis motiver pour finir ma session",
         "J'ai hate de finir l'ecole",
         "J'aime aller a l'ecole",

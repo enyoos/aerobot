@@ -24,7 +24,7 @@ public class Tuteur {
 
     public Tuteur setDescription ( String loisir )
     {
-        this.desc = this.loisir;
+        this.desc = loisir;
         return this;
     }
 

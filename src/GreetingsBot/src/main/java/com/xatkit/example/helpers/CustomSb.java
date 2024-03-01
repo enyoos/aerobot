@@ -5,6 +5,7 @@ public final class CustomSb
     String out = "";
 
     public CustomSb( String init ) { this.out = init; }
+    public CustomSb() { this(""); }
 
     public CustomSb append ( String arg )
     {
