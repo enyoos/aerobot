@@ -6,6 +6,9 @@ import static com.xatkit.example.helpers.Utils.*;
 
 
 // if not specified, la source vient de wikipedia
+// rendering latex in markdown file
+// https://gist.github.com/jesshart/8dd0fd56feb6afda264a0f7c3683abbf
+
 public class NavTree
 {
     public Node[] nodes;
@@ -67,21 +70,23 @@ public class NavTree
                     ),
                     new Node ( "D'où vient le symbole de la dérivation ?").fillNodes (
                         new String[] {
-                            new CustomSb(
-                                "Il existe plusieurs notations de la dérivation. Les voici"
-                            ).appendN(
+                            "Il existe plusieurs notations de la dérivation. Les voici",
+                            new CustomSb("").append(
                                 "" 
                             ).append(
-                                "- La notation de **Lagrange** : $f{\\prime} ( x )$"
+                                "- La notation de **Lagrange** "
+                            ).appendN(
+                                "```math"
+                            ).appendN(
+                                "f{\\prime} ( x )```"
                             ).appendN(
                                 "- La notation de **Leibniz**  : $\\frac{df}{dx}$"
                             ).appendN(
                                 "- La notation d'**Euler**     : $\\D_x f ( a )"
                             ).appendN(
                                 "- La notation de **Newton**   : $\\dot{f} ( x )"
-                            ).append(
-                                "Psst, je te conseillerai d'aller avec la notation que ton prof. utilise 😉"
                             ).out(),
+                            "Psst, je te conseillerai d'aller avec la notation que ton prof. utilise 😉"
                         }
                     ),
                     new Node ( "Qui est l'inventeur du calcul I ?").fillNodes (
@@ -95,11 +100,8 @@ public class NavTree
                     ),
                     new Node ( "Quelle est l'application de la dérivée ?").fillNodes (
                         new String[] {
-                            new CustomSb(
-                                "Voici quelques unes des applications de la dérivée"
-                            ).appendN(
-                                ""
-                            ).appendN(
+                            "Voici quelques unes des applications de la dérivée",
+                            new CustomSb("").appendN(
                                 "- Dans la mécanique 👨‍🔧"
                             ).appendN(
                                 "- Dans l'intelligence artificielle 🤖"
@@ -115,19 +117,20 @@ public class NavTree
                 new Node[] {
                     new Node ( "C'est quoi l'intégrale ?" ).fillNodes (
                         new String[] {
-                            new CustomSb(
-                                "Une intégrale, de façon plus simple, permet de trouver l'aire au dessous "
-                            ).append(
-                                "d'une courbe souvent décrite à l'aide d'une fonction continue."
-                            ).out(),
+                            // new CustomSb(
+                            //     "Une intégrale, de façon plus simple, permet de trouver l'aire au dessous "
+                            // ).append(
+                            //     "d'une courbe souvent décrite à l'aide d'une fonction continue."
+                            // ).out(),
+                            "![something](./test.jpg)"
                         }
                     ),    
                     new Node ( "Comment calculer une intégrale ?" ).fillNodes (
                         new String[] {
                             new CustomSb(
-                                "Une intégrale d'une fonction ``f`` qu'on note de la façon suivante"
+                                "Une intégrale d'une fonction ``f`` qu'on note de la façon suivante\n"
                             ).appendN(
-                                "$$\\int f(x) dx = F( x ) + C$$"                                
+                                "$\\int f(x) dx = F( x ) + C$"                                
                             ).appendN(
                                 "``F( x )`` est appelée la primitive de ``f`` ou bien l'anti-derivative de ``f`` d'où la notation"
                             ).appendN(
@@ -152,11 +155,8 @@ public class NavTree
                     ),
                     new Node ( "C'est quoi l'application du calcule intégrale ?").fillNodes (
                         new String[] {
-                            new CustomSb(
-                                "Voici quelques unes des applications de la dérivée"
-                            ).appendN(
-                                ""
-                            ).appendN(
+                            "Voici quelques unes des applications de la dérivée",
+                            new CustomSb("").appendN(
                                 "- Dans la mécanique 👨🏻‍🔧"
                             ).appendN(
                                 "- Dans l'intelligence artificielle 🤖"
@@ -212,8 +212,7 @@ public class NavTree
                     new Node ("Quelle est l'application de l'algèbre linéaire ?").fillNodes (
                         new String[] {
                             "En voici quelques unes",
-                            new CustomSb()
-                            .appendN(
+                            new CustomSb("").appendN(
                                 "- Production d'engin de jeux vidéo 💻"
                             ).appendN(
                                 "- Science de données 📊"
@@ -292,7 +291,8 @@ public class NavTree
                                 "et qui donnent des sorties ( **output** ). Le mot *logique* "
                             ).appendN(
                                 "signifie que ces entrées subissent des conditions. Voiçi une liste d'opérateur logique"
-                            ).appendN(
+                            ).out(),
+                            new CustomSb("").appendN(
                                 "- AND ($\\cdot$) -> vrai ( 1 ) lorsque les deux valeurs sont vraies."
                             ).appendN(
                                 // can't seem to find the OR symbol with latex

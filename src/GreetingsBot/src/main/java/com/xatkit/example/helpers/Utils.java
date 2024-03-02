@@ -8,6 +8,8 @@ import com.xatkit.example.helpers.Tuteur;
 public final class Utils
 {
 
+    private static final Random random = new Random();
+
     // en rajouter
     // source : https://www.selection.ca/reportages/39-faits-insolites-qui-vous-sont-probablement-inconnus/
     private static final String[] facts = {
@@ -60,13 +62,7 @@ public final class Utils
         "« L'excellence ne résulte pas d'une impulsion isolée, mais d'une succession de petits éléments qui sont réunis. » - Vincent Van Gogh.",
     };
 
-    // link : https://fr.wikipedia.org/wiki/Matrice_(math%C3%A9matiques)
-    private static final String def_matrix = "Les matrices sont des tableaux d'éléments (nombres, caractères). Par exemple, \n $$\\begin{matrix} 1 & 2 & 3\\ a & b & c \\end{matrix}";
-
-    public static void main ( String... args )
-    {
-
-    }
+    public static void main ( String... args ) { }
 
     //mock
     public static List<Tuteur> getTuteurMath()
@@ -146,7 +142,7 @@ public final class Utils
     public static String giveMeFact ()
     {
         int length = facts.length;
-        int rdmIdx = ( int ) Math.random() * length;
+        int rdmIdx = random.nextInt(length);
 
         return "**``" + facts[rdmIdx] + "``**";
     }
@@ -155,7 +151,7 @@ public final class Utils
     {
 
         int length = quotes.length;
-        int rdmIdx = ( int ) Math.random() * length;
+        int rdmIdx = random.nextInt ( length );
 
         return "**``" + quotes[rdmIdx] + "``**";
     }
@@ -215,7 +211,6 @@ public final class Utils
     public static final String PHYS              = "Physique⚛️";
 
     public static final String I_HAVE_QUESTION   = "J'ai une question🧐";
-    public static final String DISCUTONS         = "Discutons☕";
     public static final String I_NEED_TUTOR      = "J'ai besoin d'un tuteur🧑‍🏫";
     public static final String I_HAVE_SUGG       = "J'ai une suggestion💡";
 
@@ -235,7 +230,6 @@ public final class Utils
         ret.add ( I_HAVE_QUESTION );
         ret.add ( I_NEED_TUTOR    );
         ret.add ( I_HAVE_SUGG     );
-        ret.add ( DISCUTONS       );
         ret.add ( FAIT_INT        );
 
         if ( asked ) ret.add( NON_MERCI );
@@ -255,6 +249,19 @@ public final class Utils
         return ret;
     }
 
+
+    public static String computePrompt ( boolean asked, boolean quit )
+    {
+        String default_ = "Comment puis-je t'aider aujourd'hui 🛠️?";
+        String ifAsked = "Besoin d'autre chose🤔"; 
+        String ifQuit  = "De retour ! ";
+
+        if ( asked && quit ) return ifQuit + ifAsked;
+        else if ( asked )    return ifAsked;
+        else if ( quit )     return ifQuit + default_;
+        else                 return default_;
+
+    }
 
     // todo.
     // https://stackoverflow.com/questions/3324717/sending-http-post-request-in-java

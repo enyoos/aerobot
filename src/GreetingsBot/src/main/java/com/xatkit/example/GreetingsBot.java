@@ -29,6 +29,7 @@ public class GreetingsBot {
 
         private static NavTree tree    = NavTree.init_nav_3();
         private static boolean asked   = false;
+        private static boolean quit    = false;
         private static final int PORT  = 8080; // change it on the school's computer
         private static String nameTutor= "";
         private static List<Tuteur> set= null;
@@ -92,7 +93,6 @@ public class GreetingsBot {
                 val handleCalculusII = state ( "HandleCalculusII" );
                 val handleDiscreteMath = state ( "HandleDMath" );
                 val listAllQuestionMath = state ( "allQMathCalc" );
-                val handleDiscussion    = state ( "handleFreeWill" );
                 val handleQuitMenu      = state ( "handleQuitMenu" );
                 val handleGreetings     = state ( "handleGreetings" );
                 val handleFaitInt       = state ( "handleFaitInt ");
@@ -154,7 +154,7 @@ public class GreetingsBot {
                         .moveTo(promptUser);
 
                 promptUser
-                        .body ( context -> reactPlatform.reply (context, asked ? "Besoin d'autre chose🤔" : "Comment puis-je t'aider aujourd'hui 🛠️?", prompt_helper(asked)))
+                        .body ( context -> reactPlatform.reply (context, computePrompt(asked, quit), prompt_helper(asked)))
                         .next ( )
                                 .when ( intentIs( CoreLibrary.AnyValue ).and( context -> {
                                         asked = true;
@@ -171,11 +171,6 @@ public class GreetingsBot {
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         return clicked.equals( I_HAVE_SUGG );
                                 })).moveTo( handleSuggestion )
-                                .when( intentIs ( CoreLibrary.AnyValue).and ( context -> {
-                                        asked = true;
-                                        String clicked = ( String ) context.getIntent().getValue("value");
-                                        return clicked.equals( DISCUTONS );
-                                })).moveTo ( handleDiscussion )
                                 .when(intentIs( CoreLibrary.AnyValue ).and( context -> {
                                         asked = true;
                                         String clicked = ( String ) context.getIntent().getValue("value");
@@ -183,12 +178,12 @@ public class GreetingsBot {
                                 })).moveTo ( handleFaitInt )
                                 .when ( intentIs( CoreLibrary.AnyValue).and ( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
-                                        return clicked.equals( QUITTER_MENU );
+                                        return clicked.equals( QUITTER_MENU ) || clicked.equals ( NON_MERCI);
                                 })).moveTo(handleQuitMenu);
 
                 handleFaitInt
                         .body( context -> {
-                                reactPlatform.reply (context, "Savais-tu que " + giveMeFact() );
+                                reactPlatform.reply (context, "**``Savais-tu que``** " + giveMeFact() );
                         })
                         .next()
                         .moveTo ( promptUser );
@@ -254,7 +249,7 @@ public class GreetingsBot {
                         .next()
                                 .when ( intentIs( CoreLibrary.AnyValue ).and ( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
-                                        nameTutor      = clicked.substring(0, clicked.length()-1); 
+                                        nameTutor      = clicked;
                                         set            = getTuteurPhysique();
                                         return true;
                                 })).moveTo( giveTutorDesc );
@@ -264,7 +259,7 @@ public class GreetingsBot {
                         .next()
                                 .when ( intentIs( CoreLibrary.AnyValue ).and ( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
-                                        nameTutor      = clicked.substring(0, clicked.length()-1); 
+                                        nameTutor      = clicked;
                                         set            = getTuteurChimie();
                                         return true;
                                 })).moveTo( giveTutorDesc );
@@ -282,9 +277,9 @@ public class GreetingsBot {
 
                 giveTutorDesc
                         .body ( context -> {
+                                asked = true;
                                 reactPlatform.reply ( context, "Voici les informations de " + nameTutor );
                                 reactPlatform.reply ( context, Tuteur.fromSet ( set, nameTutor ).toString() );
-                                asked = true;
                         })
                         .next()
                         .moveTo ( promptUser );
@@ -319,23 +314,13 @@ public class GreetingsBot {
                         .next ( )
                                 .when ( intentIs( CoreLibrary.AnyValue ).and( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
-                                        sub = MATH_CALC_I;
-                                        return clicked.equals( MATH_CALC_I );
-                                })).moveTo ( listAllQuestionMath )
-                                .when( intentIs( CoreLibrary.AnyValue ).and( context -> {
-                                        String clicked = ( String ) context.getIntent().getValue ( "value" );
-                                        sub = MATH_CALC_II;
-                                        return clicked.equals( MATH_CALC_II );
-                                }) ).moveTo ( listAllQuestionMath )
-                                .when ( intentIs ( CoreLibrary.AnyValue ).and ( context -> {
-                                        String clicked = ( String ) context.getIntent().getValue ( "value" );
-                                        sub = MATH_DISCRETE ;
-                                        return clicked.equals( MATH_DISCRETE );
-                                }) ).moveTo ( listAllQuestionMath )
-                                .when ( intentIs( CoreLibrary.AnyValue ).and ( context -> {
-                                        String clicked = ( String ) context.getIntent().getValue ( "value" );
-                                        sub = MATH_ALGEBRE_LIN;
-                                        return clicked.equals( MATH_ALGEBRE_LIN );
+                                        if (clicked.equals( MATH_CALC_I ))        { sub = MATH_CALC_I;  }
+                                        else if ( clicked.equals( MATH_CALC_II ) ){ sub = MATH_CALC_II; }
+                                        else if ( clicked.equals( MATH_DISCRETE )){ sub = MATH_DISCRETE;}
+                                        else if ( clicked.equals( MATH_ALGEBRE_LIN)){ sub = MATH_ALGEBRE_LIN; }
+
+
+                                        return true;
                                 })).moveTo ( listAllQuestionMath )
                                 .when( intentIs( CoreLibrary.AnyValue ).and ( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");

@@ -15,7 +15,7 @@ public final class CustomSb
 
     public CustomSb appendN (String arg)
     {
-        out += arg + "<br/>";
+        out += arg + "\n";
         return this;
     }
 
