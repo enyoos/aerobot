@@ -1,0 +1,48 @@
+@import "variables.scss";
+
+.xatkit-quick-buttons-container {
+  background: $white;
+  overflow-x: auto;
+  padding: 10px;
+  white-space: initial;
+  margin: 0 auto;
+
+  .xatkit-quick-buttons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: normal;
+    font-family: $message-font-family;
+
+    .xatkit-quick-list-button {
+      display: inline-block;
+      margin: 4px 10px 0 0;
+      font-family: $message-font-family;
+      line-height: normal;
+
+      button {
+        font-weight: bold;
+        font-family: $message-font-family;
+        letter-spacing: normal;
+        text-transform: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-bottom: 15px;
+  }
+}
+
+.xatkit-quick-buttons-container.dark-mode {
+  background-color: $light-dark;
+}

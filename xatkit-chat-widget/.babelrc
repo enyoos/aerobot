@@ -1,0 +1,27 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    ["@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ],
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "@constants": "./src/constants.js",
+        "@assets": "./assets",
+        "@tests-mocks": "./mocks",
+        "@actions": "./src/store/actions",
+        "@utils": "./src/utils",
+        "@messagesComponents": "./src/components/Widget/components/Conversation/components/Messages/components",
+        "@quickButtonsComponents": "./src/components/Widget/components/Conversation/components/QuickButtons/components"
+      }
+    }]
+  ]
+}
