@@ -25028,3 +25028,471 @@ java.runtime.name=OpenJDK Runtime Environment
 2024-03-02 18:56:00 INFO  XatkitServer started, listening on port 5,000
 2024-03-02 18:56:00 INFO  Xatkit bot started
 2024-03-02 18:58:07 INFO  Detected Intent Default_Fallback_Intent (confidence 0) from query text "null"
+2024-03-03 13:17:47 INFO  Starting XatkitBot with configuration:
+xatkit.intent.provider=com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider
+xatkit.nlpjs.agentId=default
+xatkit.nlpjs.language=en
+xatkit.nlpjs.server=http://localhost:8080
+sun.cpu.isalist=amd64
+sun.desktop=windows
+sun.stdout.encoding=cp850
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+file.separator=\
+maven.home=C:\Program Files\apache-maven-3.9.5
+java.specification.maintenance.version=4
+java.vendor=OpenLogic-OpenJDK
+sun.stderr.encoding=cp850
+sun.boot.class.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\resources.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\rt.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jsse.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jce.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\charsets.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jfr.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\classes
+java.ext.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+java.version=1.8.0_372-372
+java.vm.info=mixed mode
+awt.toolkit=sun.awt.windows.WToolkit
+user.language=en
+java.specification.vendor=Oracle Corporation
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher exec:java -Dexec.mainClass=com.xatkit.example.GreetingsBot
+java.home=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre
+sun.arch.data.model=64
+java.vm.specification.version=1.8
+java.class.path=C:\Program Files\apache-maven-3.9.5\boot\plexus-classworlds-2.7.0.jar
+user.name=ilyas
+file.encoding=Cp1252
+java.specification.version=1.8
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+user.timezone=America/New_York
+user.home=C:\Users\ilyas
+library.jansi.path=C:\Program Files\apache-maven-3.9.5\lib\jansi-native
+os.version=10.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+maven.conf=C:\Program Files\apache-maven-3.9.5/conf
+java.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Git\cmd;C:\msys64\mingw64\bin;C:\Users\ilyas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\xmrig-6.20.0;C:\Program Files\monero-x86_64-w64-mingw32-v0.18.2.2;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files (x86)\Gpg4win\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.2.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Emacs\emacs-29.0.92\emacs-29.1\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Program Files\VSCodium\bin;C:\Program Files\scripts;C:\Python27;C:\Python27\Libs;C:\Python27\DLLs;C:\Python27\include;C:\Python27\Lib;C:\Python27\Lib\lib-tk;;;.
+sun.jnu.encoding=Cp1252
+classworlds.conf=C:\Program Files\apache-maven-3.9.5\bin\m2.conf
+os.name=Windows 11
+user.variant=
+java.vm.specification.vendor=Oracle Corporation
+java.io.tmpdir=C:\Users\ilyas\AppData\Local\Temp\
+line.separator=
+
+java.endorsed.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\endorsed
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.runtime.version=1.8.0_372-372-b07
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+user.country=US
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.name=OpenJDK 64-Bit Server VM
+file.encoding.pkg=sun.io
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+maven.multiModuleProjectDirectory=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+exec.mainClass=com.xatkit.example.GreetingsBot
+sun.boot.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\bin
+java.vm.version=25.372-b07
+java.runtime.name=OpenJDK Runtime Environment
+2024-03-03 13:17:47 INFO  Starting NLP.js Client
+2024-03-03 13:17:48 INFO  Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2024-03-03 13:17:48 INFO  SocketIO server started at port: 5001
+2024-03-03 13:17:48 INFO  Registered REST handler  at URI /admin (method=GET)
+2024-03-03 13:17:48 INFO  Registered REST handler  at URI /admin/css/xatkit.min.css (method=GET)
+2024-03-03 13:17:48 INFO  Registered REST handler  at URI /admin/js/xatkit.min.js (method=GET)
+2024-03-03 13:17:48 INFO  Starting ReactEventProvider
+2024-03-03 13:17:48 INFO  Starting ReactIntentProvider
+2024-03-03 13:17:48 INFO  Registering execution rule events
+2024-03-03 13:17:48 INFO  Starting NLP.js agent training (this may take a few minutes)
+2024-03-03 13:17:50 INFO  NLP.js agent trained.
+2024-03-03 13:17:50 INFO  Starting XatkitServer
+2024-03-03 13:17:50 INFO  Registered REST handler  at URI /status (method=GET)
+2024-03-03 13:17:50 INFO  XatkitServer started, listening on port 5,000
+2024-03-03 13:17:50 INFO  Xatkit bot started
+2024-03-03 13:19:21 INFO  Stopping SocketIO server
+2024-03-03 13:19:21 ERROR null
+java.net.SocketException: socket closed
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method) ~[?:1.8.0_372-372]
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131) ~[?:1.8.0_372-372]
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409) ~[?:1.8.0_372-372]
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.implAccept(ServerSocket.java:560) ~[?:1.8.0_372-372]
+	at java.net.ServerSocket.accept(ServerSocket.java:528) ~[?:1.8.0_372-372]
+	at org.apache.http.impl.bootstrap.RequestListener.run(RequestListener.java:74) [httpcore-4.4.10.jar:4.4.10]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_372-372]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_372-372]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-03-03 13:19:25 INFO  SocketIO server stopped
+2024-03-03 13:23:00 INFO  Starting XatkitBot with configuration:
+xatkit.intent.provider=com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider
+xatkit.nlpjs.agentId=default
+xatkit.nlpjs.language=en
+xatkit.nlpjs.server=http://localhost:8080
+sun.cpu.isalist=amd64
+sun.desktop=windows
+sun.stdout.encoding=cp850
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+file.separator=\
+maven.home=C:\Program Files\apache-maven-3.9.5
+java.specification.maintenance.version=4
+java.vendor=OpenLogic-OpenJDK
+sun.stderr.encoding=cp850
+sun.boot.class.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\resources.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\rt.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jsse.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jce.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\charsets.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jfr.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\classes
+java.ext.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+java.version=1.8.0_372-372
+java.vm.info=mixed mode
+awt.toolkit=sun.awt.windows.WToolkit
+user.language=en
+java.specification.vendor=Oracle Corporation
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher exec:java -Dexec.mainClass=com.xatkit.example.GreetingsBot
+java.home=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre
+sun.arch.data.model=64
+java.vm.specification.version=1.8
+java.class.path=C:\Program Files\apache-maven-3.9.5\boot\plexus-classworlds-2.7.0.jar
+user.name=ilyas
+file.encoding=Cp1252
+java.specification.version=1.8
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+user.timezone=America/New_York
+user.home=C:\Users\ilyas
+library.jansi.path=C:\Program Files\apache-maven-3.9.5\lib\jansi-native
+os.version=10.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+maven.conf=C:\Program Files\apache-maven-3.9.5/conf
+java.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Git\cmd;C:\msys64\mingw64\bin;C:\Users\ilyas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\xmrig-6.20.0;C:\Program Files\monero-x86_64-w64-mingw32-v0.18.2.2;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files (x86)\Gpg4win\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.2.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Emacs\emacs-29.0.92\emacs-29.1\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Program Files\VSCodium\bin;C:\Program Files\scripts;C:\Python27;C:\Python27\Libs;C:\Python27\DLLs;C:\Python27\include;C:\Python27\Lib;C:\Python27\Lib\lib-tk;;;.
+sun.jnu.encoding=Cp1252
+classworlds.conf=C:\Program Files\apache-maven-3.9.5\bin\m2.conf
+os.name=Windows 11
+user.variant=
+java.vm.specification.vendor=Oracle Corporation
+java.io.tmpdir=C:\Users\ilyas\AppData\Local\Temp\
+line.separator=
+
+java.endorsed.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\endorsed
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.runtime.version=1.8.0_372-372-b07
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+user.country=US
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.name=OpenJDK 64-Bit Server VM
+file.encoding.pkg=sun.io
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+maven.multiModuleProjectDirectory=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+exec.mainClass=com.xatkit.example.GreetingsBot
+sun.boot.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\bin
+java.vm.version=25.372-b07
+java.runtime.name=OpenJDK Runtime Environment
+2024-03-03 13:23:00 INFO  Starting NLP.js Client
+2024-03-03 13:23:00 INFO  Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2024-03-03 13:23:00 INFO  SocketIO server started at port: 5001
+2024-03-03 13:23:00 INFO  Registered REST handler  at URI /admin (method=GET)
+2024-03-03 13:23:00 INFO  Registered REST handler  at URI /admin/css/xatkit.min.css (method=GET)
+2024-03-03 13:23:00 INFO  Registered REST handler  at URI /admin/js/xatkit.min.js (method=GET)
+2024-03-03 13:23:00 INFO  Starting ReactEventProvider
+2024-03-03 13:23:00 INFO  Starting ReactIntentProvider
+2024-03-03 13:23:00 INFO  Registering execution rule events
+2024-03-03 13:23:01 INFO  Starting NLP.js agent training (this may take a few minutes)
+2024-03-03 13:23:03 INFO  NLP.js agent trained.
+2024-03-03 13:23:03 INFO  Starting XatkitServer
+2024-03-03 13:23:03 INFO  Registered REST handler  at URI /status (method=GET)
+2024-03-03 13:23:03 INFO  XatkitServer started, listening on port 5,000
+2024-03-03 13:23:03 INFO  Xatkit bot started
+2024-03-03 13:26:45 INFO  Detected Intent Default_Fallback_Intent (confidence 0) from query text "null"
+2024-03-03 13:26:46 INFO  Detected Intent Default_Fallback_Intent (confidence 0) from query text "null"
+2024-03-03 13:28:53 ERROR context is marked non-null but is null
+java.lang.NullPointerException: context is marked non-null but is null
+	at com.xatkit.core.ExecutionService.handleEventInstance(ExecutionService.java:231) ~[core-5.0.0-SNAPSHOT.jar:?]
+	at com.xatkit.core.platform.io.RuntimeEventProvider.sendEventInstance(RuntimeEventProvider.java:88) ~[core-5.0.0-SNAPSHOT.jar:?]
+	at com.xatkit.plugins.react.platform.io.ReactEventProvider.lambda$start$1(ReactEventProvider.java:94) ~[react-platform-4.0.1-SNAPSHOT.jar:?]
+	at com.corundumstudio.socketio.namespace.Namespace.onDisconnect(Namespace.java:190) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.transport.NamespaceClient.onDisconnect(NamespaceClient.java:115) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.handler.ClientHead.onChannelDisconnect(ClientHead.java:183) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.transport.WebSocketTransport.channelInactive(WebSocketTransport.java:148) [netty-socketio-1.7.17.jar:?]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.MessageAggregator.channelInactive(MessageAggregator.java:417) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.http.websocketx.extensions.compression.DeflateDecoder.channelInactive(DeflateDecoder.java:119) [netty-codec-http-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at com.corundumstudio.socketio.transport.PollingTransport.channelInactive(PollingTransport.java:190) [netty-socketio-1.7.17.jar:?]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:390) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:355) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1429) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:947) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$8.run(AbstractChannel.java:826) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:474) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:909) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-03-03 13:28:53 ERROR 5a4b5f96-c19a-4494-97c5-acf15a075e78 is not registered. Closing connection
+2024-03-03 13:28:53 ERROR 5a4b5f96-c19a-4494-97c5-acf15a075e78 is not registered. Closing connection
+2024-03-03 13:28:53 ERROR context is marked non-null but is null
+java.lang.NullPointerException: context is marked non-null but is null
+	at com.xatkit.core.ExecutionService.handleEventInstance(ExecutionService.java:231) ~[core-5.0.0-SNAPSHOT.jar:?]
+	at com.xatkit.core.platform.io.RuntimeEventProvider.sendEventInstance(RuntimeEventProvider.java:88) ~[core-5.0.0-SNAPSHOT.jar:?]
+	at com.xatkit.plugins.react.platform.io.ReactEventProvider.lambda$start$1(ReactEventProvider.java:94) ~[react-platform-4.0.1-SNAPSHOT.jar:?]
+	at com.corundumstudio.socketio.namespace.Namespace.onDisconnect(Namespace.java:190) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.transport.NamespaceClient.onDisconnect(NamespaceClient.java:115) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.handler.ClientHead.onChannelDisconnect(ClientHead.java:183) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.transport.WebSocketTransport.channelInactive(WebSocketTransport.java:148) [netty-socketio-1.7.17.jar:?]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.MessageAggregator.channelInactive(MessageAggregator.java:417) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.http.websocketx.extensions.compression.DeflateDecoder.channelInactive(DeflateDecoder.java:119) [netty-codec-http-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at com.corundumstudio.socketio.transport.PollingTransport.channelInactive(PollingTransport.java:190) [netty-socketio-1.7.17.jar:?]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:390) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:355) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1429) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:947) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$8.run(AbstractChannel.java:826) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:474) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:909) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-03-03 13:28:53 ERROR ce0713cf-2634-41cb-8ba1-1099f03dc849 is not registered. Closing connection
+2024-03-03 13:28:53 ERROR context is marked non-null but is null
+java.lang.NullPointerException: context is marked non-null but is null
+	at com.xatkit.core.ExecutionService.handleEventInstance(ExecutionService.java:231) ~[core-5.0.0-SNAPSHOT.jar:?]
+	at com.xatkit.core.platform.io.RuntimeEventProvider.sendEventInstance(RuntimeEventProvider.java:88) ~[core-5.0.0-SNAPSHOT.jar:?]
+	at com.xatkit.plugins.react.platform.io.ReactEventProvider.lambda$start$1(ReactEventProvider.java:94) ~[react-platform-4.0.1-SNAPSHOT.jar:?]
+	at com.corundumstudio.socketio.namespace.Namespace.onDisconnect(Namespace.java:190) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.transport.NamespaceClient.onDisconnect(NamespaceClient.java:115) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.handler.ClientHead.onChannelDisconnect(ClientHead.java:183) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.transport.WebSocketTransport.channelInactive(WebSocketTransport.java:148) [netty-socketio-1.7.17.jar:?]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.MessageAggregator.channelInactive(MessageAggregator.java:417) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.http.websocketx.extensions.compression.DeflateDecoder.channelInactive(DeflateDecoder.java:119) [netty-codec-http-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at com.corundumstudio.socketio.transport.PollingTransport.channelInactive(PollingTransport.java:190) [netty-socketio-1.7.17.jar:?]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:390) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:355) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1429) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:947) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$8.run(AbstractChannel.java:826) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:474) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:909) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-03-03 13:36:16 ERROR context is marked non-null but is null
+java.lang.NullPointerException: context is marked non-null but is null
+	at com.xatkit.core.ExecutionService.handleEventInstance(ExecutionService.java:231) ~[core-5.0.0-SNAPSHOT.jar:?]
+	at com.xatkit.core.platform.io.RuntimeEventProvider.sendEventInstance(RuntimeEventProvider.java:88) ~[core-5.0.0-SNAPSHOT.jar:?]
+	at com.xatkit.plugins.react.platform.io.ReactEventProvider.lambda$start$1(ReactEventProvider.java:94) ~[react-platform-4.0.1-SNAPSHOT.jar:?]
+	at com.corundumstudio.socketio.namespace.Namespace.onDisconnect(Namespace.java:190) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.transport.NamespaceClient.onDisconnect(NamespaceClient.java:115) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.handler.ClientHead.onChannelDisconnect(ClientHead.java:183) [netty-socketio-1.7.17.jar:?]
+	at com.corundumstudio.socketio.transport.WebSocketTransport.channelInactive(WebSocketTransport.java:148) [netty-socketio-1.7.17.jar:?]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.MessageAggregator.channelInactive(MessageAggregator.java:417) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.http.websocketx.extensions.compression.DeflateDecoder.channelInactive(DeflateDecoder.java:119) [netty-codec-http-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at com.corundumstudio.socketio.transport.PollingTransport.channelInactive(PollingTransport.java:190) [netty-socketio-1.7.17.jar:?]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:390) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:355) [netty-codec-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1429) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:947) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$8.run(AbstractChannel.java:826) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:474) [netty-transport-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:909) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.32.Final.jar:4.1.32.Final]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_372-372]
+2024-03-03 16:14:17 INFO  Starting XatkitBot with configuration:
+xatkit.intent.provider=com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider
+xatkit.nlpjs.agentId=default
+xatkit.nlpjs.language=en
+xatkit.nlpjs.server=http://localhost:8080
+sun.cpu.isalist=amd64
+sun.desktop=windows
+sun.stdout.encoding=cp850
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+file.separator=\
+maven.home=C:\Program Files\apache-maven-3.9.5
+java.specification.maintenance.version=4
+java.vendor=OpenLogic-OpenJDK
+sun.stderr.encoding=cp850
+sun.boot.class.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\resources.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\rt.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jsse.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jce.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\charsets.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\jfr.jar;C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\classes
+java.ext.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+java.version=1.8.0_372-372
+java.vm.info=mixed mode
+awt.toolkit=sun.awt.windows.WToolkit
+user.language=en
+java.specification.vendor=Oracle Corporation
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher exec:java -Dexec.mainClass=com.xatkit.example.GreetingsBot
+java.home=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre
+sun.arch.data.model=64
+java.vm.specification.version=1.8
+java.class.path=C:\Program Files\apache-maven-3.9.5\boot\plexus-classworlds-2.7.0.jar
+user.name=ilyas
+file.encoding=Cp1252
+java.specification.version=1.8
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+user.timezone=America/New_York
+user.home=C:\Users\ilyas
+library.jansi.path=C:\Program Files\apache-maven-3.9.5\lib\jansi-native
+os.version=10.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+maven.conf=C:\Program Files\apache-maven-3.9.5/conf
+java.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Git\cmd;C:\msys64\mingw64\bin;C:\Users\ilyas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\xmrig-6.20.0;C:\Program Files\monero-x86_64-w64-mingw32-v0.18.2.2;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files (x86)\Gpg4win\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.2.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Program Files\Emacs\emacs-29.0.92\emacs-29.1\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Program Files\VSCodium\bin;C:\Program Files\scripts;C:\Python27;C:\Python27\Libs;C:\Python27\DLLs;C:\Python27\include;C:\Python27\Lib;C:\Python27\Lib\lib-tk;;;.
+sun.jnu.encoding=Cp1252
+classworlds.conf=C:\Program Files\apache-maven-3.9.5\bin\m2.conf
+os.name=Windows 11
+user.variant=
+java.vm.specification.vendor=Oracle Corporation
+java.io.tmpdir=C:\Users\ilyas\AppData\Local\Temp\
+line.separator=
+
+java.endorsed.dirs=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\lib\endorsed
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.runtime.version=1.8.0_372-372-b07
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+user.country=US
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.name=OpenJDK 64-Bit Server VM
+file.encoding.pkg=sun.io
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+maven.multiModuleProjectDirectory=C:\Users\ilyas\programming\areobot\src\GreetingsBot
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+exec.mainClass=com.xatkit.example.GreetingsBot
+sun.boot.library.path=C:\Program Files (x86)\Java\openlogic-openjdk-8u372-b07-windows-64\jre\bin
+java.vm.version=25.372-b07
+java.runtime.name=OpenJDK Runtime Environment
+2024-03-03 16:14:17 INFO  Starting NLP.js Client
+2024-03-03 16:14:21 ERROR The NLP.js API is not responding. See the attached error: com.xatkit.core.recognition.nlpjs.NlpjsClientException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:8080
+2024-03-03 16:14:21 ERROR An error occurred when starting the XatkitBot, trying to close started services
+2024-03-03 16:14:21 INFO  Stopping XatkitServer
+2024-03-03 16:14:21 WARN  Cannot stop the XatkitServer, the server is not started
