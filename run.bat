@@ -1,2 +1,2 @@
 @echo off
-npm start
+npx patch-package xatkit-chat-widget && npm i && npm start

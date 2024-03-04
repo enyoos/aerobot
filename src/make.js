@@ -7,7 +7,7 @@ export default function make (url, rootName ){
     widget : {
       title : "Aerobot",
       subtitle : "Aerobot🤖",
-      startMinimized : true, // when push to prod, toggle true
+      startMinimized : false, // when push to prod, toggle true
       placeHolders : {
         sender : "Écrit moi quelque chose",
         buttons : "Choisis une option",

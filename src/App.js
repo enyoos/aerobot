@@ -1,24 +1,38 @@
+import { useEffect, useState } from 'react';
 import Login from './Components/Login';
-import { useEffect, useRef, useState } from 'react';
+// import { useEffect, useRef, useState } from 'react';
 import NewWindow from 'react-new-window';
-import make from './make';
+// import make from './make';
+
+const fts = "resizable=0";
 
 function App() {
+  const [show, setShow] = useState(false);
   const dockChat = () => {
-    make( 'http://localhost:3000/docked', "chat-container" );
+    // make( ".", "docked-chat");
+    setShow( ! show );
   }
 
   return (
     <>
-      {/* <button onClick={dockChat}>Dock chat bot</button> */}
-      <NewWindow 
-        name='Chat docked' 
-        url='http://localhost:3000/docked' 
-        onOpen={dockChat} 
-        title='Chat docked'
+      <Login/>
+      <button 
+        title='Your session wont be saved' 
+        onClick={dockChat}
       >
-        <div id='chat-container'></div>
-      </NewWindow>
+        Dock chat
+      </button>
+      { show ?
+        <NewWindow 
+          name='Chat docked' 
+          url="http://localhost:3000/docked"
+          onOpen={dockChat} 
+          title='Chat docked'
+          // features={fts}
+        >
+        </NewWindow>
+        : ""
+      }
     </>
   );
 }
