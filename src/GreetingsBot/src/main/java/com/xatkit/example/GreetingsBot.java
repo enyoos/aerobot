@@ -134,7 +134,7 @@ public class GreetingsBot {
                         .moveTo ( promptUser );
 
                 handleHappy
-                        .body( context -> reactPlatform.reply(context, /*"Wow, je suis très content pour toi 👌!"*/ "$$Hello$$" ))
+                        .body( context -> reactPlatform.reply(context, "Wow, je suis très content pour toi 👌") )
                         .next()
                         .moveTo(promptUser);
 

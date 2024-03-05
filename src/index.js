@@ -8,11 +8,11 @@ import make from './make';
 
 make("http://localhost:3000", "chat");
 
-const root = ReactDOM.createRoot(document.getElementById('main'));
+// const root = ReactDOM.createRoot(document.getElementById('main'));
 
-root.render(
-  // remove the strict mode on deploy
-  <React.StrictMode>
-    <App/>
-  </React.StrictMode>
-);
+// root.render(
+//   // remove the strict mode on deploy
+//   <React.StrictMode>
+//     <App/>
+//   </React.StrictMode>
+// );

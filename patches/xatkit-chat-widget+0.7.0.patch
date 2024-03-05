@@ -1,5 +1,5 @@
 diff --git a/node_modules/xatkit-chat-widget/lib/xatkit.css b/node_modules/xatkit-chat-widget/lib/xatkit.css
-index 0983846..63e56de 100644
+index 0983846..e164136 100644
 --- a/node_modules/xatkit-chat-widget/lib/xatkit.css
 +++ b/node_modules/xatkit-chat-widget/lib/xatkit.css
 @@ -1,6 +1,6 @@
@@ -10,7 +10,14 @@ index 0983846..63e56de 100644
    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
    border-radius: 10px 10px 0 0;
    color: #fff;
-@@ -40,7 +40,7 @@
+@@ -34,13 +34,13 @@
+   border-radius: 0;
+   -ms-flex-negative: 0;
+       flex-shrink: 0;
+-  position: relative; }
++  position: absolute; }
+ 
+ .xatkit-full-screen .xatkit-title {
    padding: 0 0 15px 0; }
  
  .xatkit-full-screen .xatkit-close-button {
@@ -19,7 +26,12 @@ index 0983846..63e56de 100644
    border: 0;
    display: block;
    position: absolute;
-@@ -64,7 +64,7 @@
+@@ -60,11 +60,11 @@
+     border-radius: 0;
+     -ms-flex-negative: 0;
+         flex-shrink: 0;
+-    position: relative; }
++    position: absolute; }
    .xatkit-conversation-container .xatkit-title {
      padding: 0 0 15px 0; }
    .xatkit-conversation-container .xatkit-close-button {
@@ -117,3 +129,8 @@ index 0983846..63e56de 100644
  @media screen and (max-width: 800px) {
    .xatkit-launcher {
      bottom: 0;
+@@ -793,4 +797,3 @@
+     width: 100%; }
+     .xatkit-widget-container.xatkit-opened {
+       height: 100%; } }
+-
