@@ -6,7 +6,7 @@ export default function make (url, rootName ){
     elementId : rootName,
     widget : {
       title : "Aerobot",
-      subtitle : "Aerobot🤖",
+      subtitle : "Parle avec Aerobot🤖",
       startMinimized : false, // when push to prod, toggle true
       placeHolders : {
         sender : "Écrit moi quelque chose",

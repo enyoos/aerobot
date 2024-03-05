@@ -166,19 +166,13 @@ public final class Utils
     {
         List<String> list = new ArrayList<String>();
 
-        list.add ( MATH_CALC_I   );
-        list.add ( MATH_CALC_II  );
+        list.add ( MATH_CALC_I      );
+        list.add ( MATH_CALC_II     );
         list.add ( MATH_ALGEBRE_LIN );
-        list.add ( MATH_DISCRETE );
+        list.add ( MATH_DISCRETE    );
+        list.add ( THROW_BACK );
 
         return list;
-    }
-
-    public static String emoji ( int[] surr )
-    {
-        String ret = new String ( surr, 0, surr.length );
-        ret.intern();
-        return ret;
     }
 
     public static List<Node> cast_static( Node[] nodes )
@@ -222,6 +216,7 @@ public final class Utils
     public static final String NON_MERCI         = "Non Merci✌️";
 
     public static final String FAIT_INT          = "Un fait interessant🧐";
+    public static final String THROW_BACK        = "Retourner🔙";
 
     public static List<String> prompt_helper ( boolean asked )
     {
@@ -245,6 +240,8 @@ public final class Utils
         ret.add (MATH);
         ret.add (CHIMIE);
         ret.add (PHYS);
+        ret.add( THROW_BACK );
+
 
         return ret;
     }
