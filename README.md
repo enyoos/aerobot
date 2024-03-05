@@ -30,5 +30,31 @@ mvn clean install
 ```
 
 ```console
-git clone 
+cd nlp.js-server
+```
+
+```console
+npm i
+```
+
+navigate to the root directory using :
+```console
+cd .. && cd.. && cd ..
+```
+
+# Execution
+
+## Running react Server
+```console
+npm start
+```
+
+## Running Chat Bot server
+```console
+cd src/GreetingsBot && mvn clean compile && mvn exec:java -Dexec.mainClass="com.xatkit.example.GreetingsBot"
+```
+
+## Running the nlp-js.server
+```console
+cd src/GreetingsBot/nlp-js.server && npm start
 ```
