@@ -2,17 +2,36 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import make from './make';
+
+  renderXatkitWidget({
+    elementId : "chat",
+    widget : {
+      title : "Aerobot",
+      subtitle : "Parle avec Aerobot🤖",
+      startMinimized : false, // when push to prod, toggle true
+      placeHolders : {
+        sender : "Écrit moi quelque chose",
+        buttons : "Choisis une option",
+      },
+      images : {
+        profileAvatar  : process.env.PUBLIC_URL + "/rosemont.svg",
+      }
+    },
+    location : {
+      url : "http://localhost:3000"
+    },
+    storage : {
+      autoClear : true,
+    }
+  });
 
 
 
-make("http://localhost:3000", "chat");
+const root = ReactDOM.createRoot(document.getElementById('main'));
 
-// const root = ReactDOM.createRoot(document.getElementById('main'));
-
-// root.render(
-//   // remove the strict mode on deploy
-//   <React.StrictMode>
-//     <App/>
-//   </React.StrictMode>
-// );
+root.render(
+ // remove the strict mode on deploy
+ <React.StrictMode>
+   <App/>
+ </React.StrictMode>
+);

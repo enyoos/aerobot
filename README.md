@@ -58,3 +58,4 @@ cd src/GreetingsBot && mvn clean compile && mvn exec:java -Dexec.mainClass="com.
 ```console
 cd src/GreetingsBot/nlp-js.server && npm start
 ```
+print ( "hello world" );
