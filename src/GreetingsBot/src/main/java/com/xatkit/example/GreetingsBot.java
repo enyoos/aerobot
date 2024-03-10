@@ -35,6 +35,7 @@ public class GreetingsBot {
         private static State state     = new State();
         private static List<Tuteur> set= null;
         private static String sub      = null;
+        private static String curr     = null; //MATH, CHIMIE , PHYS 
         private static String question = null;
 
         // PRINT EVAL LOOP
@@ -94,6 +95,7 @@ public class GreetingsBot {
                 val handleCalculusII = state ( "HandleCalculusII" );
                 val handleDiscreteMath = state ( "HandleDMath" );
                 val listAllQuestionMath = state ( "allQMathCalc" );
+                val listAllQuestionChimie = state ( "allQChimie" );
                 val handleQuitMenu      = state ( "handleQuitMenu" );
                 val handleGreetings     = state ( "handleGreetings" );
                 val handleFaitInt       = state ( "handleFaitInt ");
@@ -310,20 +312,87 @@ public class GreetingsBot {
                                         return clicked.equals(THROW_BACK);
                                 })).moveTo( promptUser );
 
+
+                handlePhysique
+                  .body( context -> {
+                    curr = PHYS;
+                    reactPlatform.reply ( context, "Choisis ta matière pertinente à cette question", listeMatiereChimie() );
+                  })
+                  .next()
+                  .moveTo ( awaitingInput );
+
                 handleChimie
-                        .body( context -> reactPlatform.reply ( context, "Voici les matières disponibles"))
+                        .body( context -> {
+                          curr = CHIMIE;
+                          reactPlatform.reply ( context, "Choisis ta matière pertinente à cette question", listeMatiereChimie() );
+                        })
                         .next()
-                        .moveTo( awaitingInput );
+                                .when ( intentIs( CoreLibrary.AnyValue ).and( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        boolean ret = clicked.equals( STOCH  );
+                                        if (ret)        { state.sub = STOCH ;  }
+
+                                        return ret;
+                                })).moveTo ( listAllQuestionChimie )
+                                .when ( intentIs ( CoreLibrary.AnyValue ).and ( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        boolean ret = clicked.equals ( STRUCT_ATOMIQUE  );
+                                        if ( ret ) { state.sub = STRUCT_ATOMIQUE; }
+
+                                        return ret;
+                                })).moveTo( listAllQuestionChimie )
+                                .when ( intentIs( CoreLibrary.AnyValue ).and( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        boolean ret = clicked.equals(COMP_CHIMIQUE );
+                                        if( ret ) { state.sub = COMP_CHIMIQUE; }
+
+                                        return ret;
+                                }) ).moveTo( listAllQuestionChimie)
+                                .when ( intentIs ( CoreLibrary.AnyValue ).and( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        boolean ret = clicked.equals(REACT_CHIMIQUE);
+                                        if ( ret ) { state.sub = REACT_CHIMIQUE; }
+
+                                        return ret;
+                                }) ).moveTo ( listAllQuestionChimie)
+                                .when ( intentIs ( CoreLibrary.AnyValue ).and( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        boolean ret = clicked.equals(ATTRACTION_MOL);
+                                        if ( ret ) { state.sub = ATTRACTION_MOL; }
+
+                                        return ret;
+                                }) ).moveTo ( listAllQuestionChimie )
+                                .when ( intentIs ( CoreLibrary.AnyValue ).and ( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        boolean ret    = clicked.equals(THROW_BACK);
+                                        
+                                        return ret;
+                                })).moveTo ( promptChooseSubject );
+
+                listAllQuestionChimie
+                  .body ( context -> {
+                    reactPlatform.reply ( context, "Voila quelques questions dans ma base de donnée📂", NavTree.static_cast (tree.navigate(CHIMIE).navigate(state.sub).getListNodes() ));
+                  })
+                  .next ( )
+                    .when ( intentIs( CoreLibrary.AnyValue ).and ( context -> {
+                            String clicked = ( String ) context.getIntent().getValue("value");
+                            state.question = clicked;
+
+                            return true;
+                    })).moveTo( answerQuestion );
+
 
                 handleListMatiereMath
-                        .body ( context -> reactPlatform.reply ( context, "Choisis ta matière pertinente à cette question", listeMatiereMath() ))
+                        .body ( context -> {
+                          curr = MATH;
+                          reactPlatform.reply ( context, "Choisis ta matière pertinente à cette question", listeMatiereMath() );
+                        })
                         .next ( )
                                 .when ( intentIs( CoreLibrary.AnyValue ).and( context -> {
                                         String clicked = ( String ) context.getIntent().getValue("value");
                                         boolean ret = clicked.equals( MATH_CALC_I );
                                         if (ret)        { state.sub = MATH_CALC_I;  }
-                                        // else if ( clicked.equals( MATH_DISCRETE )){ sub = MATH_DISCRETE;}
-                                        // else if ( clicked.equals( MATH_ALGEBRE_LIN)){ sub = MATH_ALGEBRE_LIN; }
+
                                         return ret;
                                 })).moveTo ( listAllQuestionMath )
                                 .when ( intentIs ( CoreLibrary.AnyValue ).and ( context -> {
@@ -357,7 +426,10 @@ public class GreetingsBot {
                 answerQuestion
                         .body ( context -> {
                                 state.asked = true;
-                                Node rets[] = tree.navigate(MATH).navigate(state.sub).navigate(state.question + " ?").nodes;
+                                System.out.println("the curr : " + curr );
+                                System.out.println("the question : " + state.question );
+                                System.out.println("the sub : " + state.sub );
+                                Node rets[] = tree.navigate(curr).navigate(state.sub).navigate(state.question + " ?").nodes;
 
                                 // response with batch_ans
                                 for ( Node ret :  rets ) { reactPlatform.reply ( context, ret.header ); }

@@ -61,9 +61,9 @@ public class Tuteur {
     public String toString()
     {
         // make it align is the markdown ouptut view.
-        String ret   = "- ⋆˚✿˖° " + this.omnivox;
-        String other = "-       📧 " + this.outlook;
-        String otherr= "-       ❤️ " + this.desc;
+        String ret   = "- ⋆˚✿˖°" + this.omnivox;
+        String other = "- 📧" + this.outlook;
+        String otherr= "- ❤️ " + this.desc;
 
         return ret + "\n" + other + "\n" + otherr;
     }

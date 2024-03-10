@@ -222,4 +222,23 @@ public final class Intents
         "Salutation",
     };
 
+  public static String[] origin = {
+    "D'ou vient tu ?",
+    "Qui t'a creer",
+    "Quelle ta mission dans ta vie.",
+    "Quelle est ta cause ?",
+    "C'est quoi ton but dans ta vie ?",
+    "Pourquoi existe tu ?",
+    "Est-ce que tu es vivant ?",
+    "Qui est ton createur ?",
+    "Qui t'a donner la vie ?",
+    "Qu'est-ce qui te motive dans la vie ?",
+    "Est-ce que tu es un robot ?",
+    "Est-ce que tu es un animal ?",
+    "Peux-tu ressentir de la douleur ?",
+    "Est-ce que tu as des sentiments ?",
+    "Dans quelle endroit vis tu ?",
+    ""
+  };
+
 }

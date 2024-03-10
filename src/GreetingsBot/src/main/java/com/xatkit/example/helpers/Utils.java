@@ -156,11 +156,27 @@ public final class Utils
         return "**``" + quotes[rdmIdx] + "``**";
     }
 
-    public static List<String> listeMatiereChimie ()
-    {
-        return null;
+    public static final String STOCH           = "Stoechiométrie💉"; 
+    public static final String STRUCT_ATOMIQUE = "Atome💫";
+    public static final String COMP_CHIMIQUE   = "Composer chimique🔗";
+    public static final String REACT_CHIMIQUE  = "Reaction chimique💥";
+    public static final String ATTRACTION_MOL  = "Attraction moleculaire🧲";
+
+    public static List<String> listeMatiereChimie () {
+      List<String> list = new ArrayList<String>();
+
+      list.add ( STOCH );
+      list.add ( STRUCT_ATOMIQUE );
+      list.add ( COMP_CHIMIQUE );
+      list.add ( REACT_CHIMIQUE);
+      list.add ( ATTRACTION_MOL);
+
+      return list;
     }
 
+    public static List<String> listeMatierePhysique () {
+      return null; 
+    }
 
     public static List<String> listeMatiereMath ( )
     {
@@ -174,6 +190,7 @@ public final class Utils
 
         return list;
     }
+    
 
     public static List<Node> cast_static( Node[] nodes )
     {

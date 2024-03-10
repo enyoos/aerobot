@@ -28,6 +28,7 @@ public class NavTree
 
         Node[] nodes_ = new Node[size];
 
+        // NOTE : toutes vos questions doivent finir par un espace et une marque d'interrogation : <<" ?">>
         nodes_[0] = new Node (MATH);
         nodes_[0].fillNodes( new Node[] {
             new Node(MATH_CALC_I).fillNodes (
@@ -314,10 +315,85 @@ public class NavTree
         });
 
         nodes_[1] = new Node ( CHIMIE );
-        nodes_[1].fillNodes ( new Node[] {
-            new Node(""),
-        });
-        
+        nodes_[1].fillNodes (
+          new Node[] {
+            new Node(STOCH).fillNodes (
+                new Node[] {
+                  new Node("Qu'est-ce que la stochiometrie ?").fillNodes (
+                    new String[] {
+                      new CustomSb ( "la stochiometrie est une analyse des quantites des particules ")
+                        .append("dans une reaction chimique.").out(),
+                    }
+                  ),
+                  new Node("Qui est l'inventeur de la stochiometrie ?").fillNodes (
+                    new String[] {
+                      new CustomSb ( "Jeremias Benjamin Richter est le premier homme a enoncer ")
+                      .append ( "les principes de la stochiometrie.").out(),
+                    }
+                  ),
+                  new Node ("Quelles sont les applications de la stochiometrie ?").fillNodes (
+                    new String[] {
+                      new CustomSb( "Voici quelques unes des applications de la **stochiometrie**").appendN("").out(),
+                      new CustomSb( "- La pharmaceutique⚕" )
+                        .appendN(
+                          "- L'ingenieurie chimique👩‍🔬"
+                        ).appendN(
+                          "- Les sciences de l'environnement🌳"
+                        ).out(),
+                    }
+                  ),
+                }
+            ),
+          }
+            /*
+          new Node[] {
+            new Node(STOCH).fillNodes (
+              new Node[] {
+                new Node ( "Qu'est-ce que la stochiometrie?" ).fillNodes(
+                  new String[] {
+                    new CustomSb ("la stochiometrie est une analyse des quantites des particules ")
+                      .append ( " dans une reaction chimique").out(),
+                  }
+                ),
+
+                new Node ( "Qui est l'inventeur de la stochiometrie?").fillNodes (
+                  new String[] {
+                    new CustomSb ( "Jeremias Benjamin Richter est le premier homme a enoncer ")
+                      .append ( "les principes de la stochiometrie.").out(),
+                  }
+                ),
+
+                new Node ( "Quelles sont les applications de la stochiometrie?" ).fillNodes(
+                  new String[] {
+                    new CustomSb( "Voici quelques unes des applications de la **stochiometrie**").appendN("").out(),
+                    new CustomSb( "- La pharmaceutique⚕" )
+                      .appendN(
+                        "- L'ingenieurie chimique👩‍🔬"
+                      ).appendN(
+                        "- Les sciences de l'environnement🌳"
+                      ).out(),
+                  }
+                ),
+              },
+            ),
+          }
+          */
+         // TODO: COMPLETE THIS STUFF
+                /*
+                new Node(COMP_CHIMIQUE).fillNodes (
+                
+                ),
+                new Node(STRUCT_ATOMIQUE).fillNodes(
+
+                ),
+                new Node(REACT_CHIMIQUE).fillNodes(
+
+                ),
+                new Node(ATTRACTION_MOL ).fillNodes(
+
+                ),*/
+        );
+
         nodes_[2] = new Node ( PHYS );
         nodes_[2].fillNodes ( new Node[] {
             new Node (""),
