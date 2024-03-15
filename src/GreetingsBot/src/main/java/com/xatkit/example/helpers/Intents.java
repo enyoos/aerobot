@@ -47,6 +47,9 @@ public final class Intents
         "Je me sens battu",
         "Je suis en proie à la désolation",
         "Je suis mélancolique",
+        "J'ai de l'anxiete sociale",
+        "J'ai peur des gens",
+        "Je ne veux plus socialiser",
         "Je suis amer",
         "J'ai le cafard",
         "Je broie du noir",
@@ -222,11 +225,17 @@ public final class Intents
         "Salutation",
     };
 
-  public static String[] origin = {
+  public static String[] origins_ = {
     "D'ou vient tu ?",
-    "Qui t'a creer",
-    "Quelle ta mission dans ta vie.",
+    "Qui t'a creer ?",
+    "Quelle ta mission dans ta vie ?",
     "Quelle est ta cause ?",
+    "Quelle est ton origine ?",
+    "Quelles sont tes origines ?",
+    "Tu es fais de quoi ?",
+    "Pourquoi existe-tu ?",
+    "Comment tu marche ?",
+    "Quelle est ton fonctionnement interieur ?",
     "C'est quoi ton but dans ta vie ?",
     "Pourquoi existe tu ?",
     "Est-ce que tu es vivant ?",
@@ -238,7 +247,24 @@ public final class Intents
     "Peux-tu ressentir de la douleur ?",
     "Est-ce que tu as des sentiments ?",
     "Dans quelle endroit vis tu ?",
-    ""
   };
+
+  public static String[] indecis_ = {
+    "Je ne sais ce que je vais faire plus tards.",
+    "Je ne sais pas si je veux continuer l'ecole.",
+    "A quoi sert l'ecole ?",
+    "Pourquoi l'ecole est quelque chose d'obligatoire ?",
+    "Quelle est mon metier du future ?",
+    "Suis-je vraiment fais pour l'ecole ?",
+    "Peux-tu me consiller un programme universitaire",
+    "Je ne sais quel programme universitaire je vais aller ?",
+    "Je n'arrive pas a trouver ma passion",
+    "Quelle est ma passion ?",
+    "Je ne sais pas ce qui m'attend dans mon future.",
+    "Quelles sont mes chances de reussir ?",
+    "Quelles cours je devrais choisir pour un bon salaire.",
+  };
+
+
 
 }

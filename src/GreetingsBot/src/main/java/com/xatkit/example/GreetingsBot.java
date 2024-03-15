@@ -56,11 +56,17 @@ public class GreetingsBot {
                 val sad            = intent ( "Sad" )
                         .trainingSentences( sad_ );
 
+                val origins        = intent( "Origin" )
+                        .trainingSentences( origins_ );
+
                 val happy          = intent ( "Happy" )
                         .trainingSentences( joy_ );
                 
                 val greetings      = intent ("Greetings" )
                         .trainingSentences( greetings_ );
+
+                val indecis        = intent ("Indecision")
+                        .trainingSentences( indecis_ );
 
                 ReactPlatform reactPlatform             = new ReactPlatform();
                 ReactEventProvider reactEventProvider   = reactPlatform.getReactEventProvider();
@@ -98,6 +104,8 @@ public class GreetingsBot {
                 val listAllQuestionChimie = state ( "allQChimie" );
                 val handleQuitMenu      = state ( "handleQuitMenu" );
                 val handleGreetings     = state ( "handleGreetings" );
+                val handleOrigins       = state ( "handleOrigins" );
+                val handleIndecis       = state ( "handleIndecis" );
                 val handleFaitInt       = state ( "handleFaitInt ");
 
 
@@ -109,6 +117,7 @@ public class GreetingsBot {
                 awaitingInput
                         .next()
                         .when(intentIs(menu)).moveTo ( promptUser )
+                        .when(intentIs(origins)).moveTo( handleOrigins )
                         .when(intentIs(thankful)).moveTo(handleThankful)
                         .when(intentIs(greetings)).moveTo( handleGreetings )
                         .when(intentIs(howAreYou)).moveTo(handleWhatsUp)
@@ -134,6 +143,24 @@ public class GreetingsBot {
                         .body(context -> reactPlatform.reply(context, "Je vais bien💯 Merci."))
                         .next()
                         .moveTo ( promptUser );
+
+                handleOrigins
+                        .body ( context -> {
+                          // do we really need some function for that ?
+                          for ( String ans : fromAns() ) {
+                            reactPlatform.reply ( context, ans );
+                          }
+                        })
+                        .next ()
+                        .moveTo(awaitingInput);
+
+                handleIndecis
+                        .body ( context -> {
+                          reactPlatform.reply( context, "Ouf! Je vois que tu n'es pas sure pour ton future❓🤷‍♂️");
+                          reactPlatform.reply( context, "Je te conseille fortement de prendre un rdv avec ton **API**👩🏻‍💻");
+                        })
+                        .next()
+                        .moveTo ( awaitingInput);
 
                 handleHappy
                         .body( context -> reactPlatform.reply(context, "Wow, je suis très content pour toi 👌") )
@@ -316,10 +343,15 @@ public class GreetingsBot {
                 handlePhysique
                   .body( context -> {
                     curr = PHYS;
-                    reactPlatform.reply ( context, "Choisis ta matière pertinente à cette question", listeMatiereChimie() );
+                    reactPlatform.reply ( context, "Choisis ta matière pertinente à cette question", listeMatierePhysique() );
                   })
                   .next()
-                  .moveTo ( awaitingInput );
+                    .when ( intentIs ( CoreLibrary.AnyValue ).and ( context -> {
+                            String clicked = ( String ) context.getIntent().getValue("value");
+                            boolean ret    = clicked.equals(THROW_BACK);
+                            
+                            return ret;
+                    })).moveTo ( promptChooseSubject );
 
                 handleChimie
                         .body( context -> {

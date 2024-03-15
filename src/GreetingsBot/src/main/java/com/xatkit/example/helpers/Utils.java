@@ -162,6 +162,7 @@ public final class Utils
     public static final String REACT_CHIMIQUE  = "Reaction chimique💥";
     public static final String ATTRACTION_MOL  = "Attraction moleculaire🧲";
 
+
     public static List<String> listeMatiereChimie () {
       List<String> list = new ArrayList<String>();
 
@@ -170,12 +171,26 @@ public final class Utils
       list.add ( COMP_CHIMIQUE );
       list.add ( REACT_CHIMIQUE);
       list.add ( ATTRACTION_MOL);
+      list.add ( THROW_BACK );
 
       return list;
     }
 
+    public static final String DESC_MOV = "Description du mouvement🛤️";
+    public static final String FORCE    = "Les forces🦾";
+    public static final String ENERGIE  = "L'energie💥";
+    public static final String G_       = "La gravite🌌";
+
     public static List<String> listeMatierePhysique () {
-      return null; 
+      List<String> list = new ArrayList<String>();
+
+      list.add ( DESC_MOV );
+      list.add ( FORCE);
+      list.add ( ENERGIE);
+      list.add ( G_ );
+      list.add ( THROW_BACK );
+
+      return list; 
     }
 
     public static List<String> listeMatiereMath ( )
@@ -189,6 +204,15 @@ public final class Utils
         list.add ( THROW_BACK );
 
         return list;
+    }
+
+    // reponds a la questions : d'ou vient tu ?
+    public static String[] fromAns ()
+    {
+      return new String[]{
+        "Je suis un ``robot`` ; des 0 et des 1. Rien de plus ; je n'ai ni emotions ni opinions.",
+        " Mon but est de repondre a vos questions et de vous guider dans votre cheminement scolaire."
+      };
     }
     
 
@@ -219,7 +243,7 @@ public final class Utils
     public static final String MATH_DISCRETE     = "Mathématiques discrètes🤫";
 
     public static final String CHIMIE            = "Chimie🧪";
-    public static final String PHYS              = "Physique⚛️";
+    public static final String PHYS              = "Mecanique🏃🏼‍♀️";
 
     public static final String I_HAVE_QUESTION   = "J'ai une question🧐";
     public static final String I_NEED_TUTOR      = "J'ai besoin d'un tuteur🧑‍🏫";

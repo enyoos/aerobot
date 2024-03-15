@@ -344,6 +344,17 @@ public class NavTree
                   ),
                 }
             ),
+            new Node(COMP_CHIMIQUE).fillNodes (
+              new Node[] {
+                new Node ( "Inserer la premiere question pour " + COMP_CHIMIQUE ).fillNodes (
+                  new String[] {
+                    new CustomSb (
+                      "Inserer la premiere reponse pour " + COMP_CHIMIQUE
+                    ).out()
+                  }
+                )
+              }
+            ),
           }
             /*
           new Node[] {
