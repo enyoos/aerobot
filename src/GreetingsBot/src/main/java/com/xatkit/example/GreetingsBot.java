@@ -28,17 +28,10 @@ import static com.xatkit.example.helpers.Intents.*;
 public class GreetingsBot {
 
         private static NavTree tree    = NavTree.init_nav_3();
-        private static boolean asked   = false;
-        private static boolean quit    = false;
-        private static final int PORT  = 8080; // change it on the school's computer
-        private static String nameTutor= "";
         private static State state     = new State();
-        private static List<Tuteur> set= null;
-        private static String sub      = null;
-        private static String curr     = null; //MATH, CHIMIE , PHYS 
-        private static String question = null;
+        private static int PORT        = 6666;
 
-        // PRINT EVAL LOOP
+       // PRINT EVAL LOOP
         public static void main(String[] args) {
 
                 val menu           = intent("Menu")
@@ -307,7 +300,11 @@ public class GreetingsBot {
                                         state.set      = getTuteurMath();
 
                                         return true;
-                                })).moveTo( giveTutorDesc );
+                                })).moveTo( giveTutorDesc )
+                                .when( intentIs( CoreLibrary.AnyValue).and ( context -> {
+                                        String clicked = ( String ) context.getIntent().getValue("value");
+                                        return clicked.equals ( QUITTER_MENU );
+                                })).moveTo( handleQuitMenu );
 
                 giveTutorDesc
                         .body ( context -> {
@@ -342,7 +339,7 @@ public class GreetingsBot {
 
                 handlePhysique
                   .body( context -> {
-                    curr = PHYS;
+                    state.curr = PHYS;
                     reactPlatform.reply ( context, "Choisis ta matière pertinente à cette question", listeMatierePhysique() );
                   })
                   .next()
@@ -355,7 +352,7 @@ public class GreetingsBot {
 
                 handleChimie
                         .body( context -> {
-                          curr = CHIMIE;
+                          state.curr = CHIMIE;
                           reactPlatform.reply ( context, "Choisis ta matière pertinente à cette question", listeMatiereChimie() );
                         })
                         .next()
@@ -416,7 +413,7 @@ public class GreetingsBot {
 
                 handleListMatiereMath
                         .body ( context -> {
-                          curr = MATH;
+                          state.curr = MATH;
                           reactPlatform.reply ( context, "Choisis ta matière pertinente à cette question", listeMatiereMath() );
                         })
                         .next ( )
@@ -458,10 +455,7 @@ public class GreetingsBot {
                 answerQuestion
                         .body ( context -> {
                                 state.asked = true;
-                                System.out.println("the curr : " + curr );
-                                System.out.println("the question : " + state.question );
-                                System.out.println("the sub : " + state.sub );
-                                Node rets[] = tree.navigate(curr).navigate(state.sub).navigate(state.question + " ?").nodes;
+                                Node rets[] = tree.navigate(state.curr).navigate(state.sub).navigate(state.question + " ?").nodes;
 
                                 // response with batch_ans
                                 for ( Node ret :  rets ) { reactPlatform.reply ( context, ret.header ); }

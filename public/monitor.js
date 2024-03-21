@@ -32,9 +32,8 @@ var obs      = new MutationObserver ( function ( muts ) {
     if ( t_div !==  null ) {obs.disconnect()}
     else {
 
+      console.log ( mut.addedNodes );
       t_div = mut.addedNodes[0]
-      // attempt  to make the div resizable
-      // t_div.appendChild( resizer );
       t_div.style.position = "absolute";
       t_div.style.cursor   = 
       t_div.addEventListener('mousedown', function(e) {

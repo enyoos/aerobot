@@ -11,6 +11,7 @@ public final class State {
     public String sub;   // sub ( sous-matiere )
     public String question; // la question choisit
     public List<Tuteur> set;// set des etudiants pertinents.
+    public String curr;
 
     public State(){}
 }

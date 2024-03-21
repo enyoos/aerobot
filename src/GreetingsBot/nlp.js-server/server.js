@@ -8,7 +8,7 @@ const indexRouter = require('./routes/index')
 const apiRouter = require('./routes/api')
 
 const server = express()
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 6666
 
 server.use(express.json({limit: '50mb'}));
 server.use(express.urlencoded({limit: '50mb', extended: false}));
