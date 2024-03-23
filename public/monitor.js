@@ -1,15 +1,32 @@
 var counter       = 0;
 var isDown        = false;
+const CTRL        = 17; 
 const DIV_ID      = "chat";
 const div         = document.getElementById ( DIV_ID );
-let t_div         = null;
+let moveable_div  = null;
+let button_div    = null;
+var state         = {
+  closed_container_conv : true,
+};
 
 document.addEventListener('mouseup', function() {
   isDown = false;
 }, true);
 
+// escape key is for closing the dialog
+document.addEventListener('keyup', (e) => {
+  if ( e.keyCode === CTRL ) { 
+    if ( button_div !== null ) {
+      button_div.click();
+      state.closed_container_conv = !state.closed_container_conv;
+    }
+    else { console.log ( "button_div undefined" );}
+  }
+}) 
+
+// piece of logic for moving the div position.
+/*
 document.addEventListener('mousemove', function(event) {
-   console.log ( "mousemove" );
     event.preventDefault();
     if (isDown) {
       mousePosition = {
@@ -17,36 +34,42 @@ document.addEventListener('mousemove', function(event) {
         y : event.clientY
       };
 
-      let prevx = parseInt (t_div.style.left);
-      let prevy = parseInt ( t_div.style.top);
+      let prevx = parseInt (moveable_div.style.left);
+      let prevy = parseInt ( moveable_div.style.top);
       let dx    = (mousePosition.x + offset[0]);
       let dy    = (mousePosition.y + offset[1]);
 
-      t_div.style.left = (mousePosition.x + offset[0]) + 'px';
-      t_div.style.top  = (mousePosition.y + offset[1]) + 'px';
+      moveable_div.style.left = (mousePosition.x + offset[0]) + 'px';
+      moveable_div.style.top  = (mousePosition.y + offset[1]) + 'px';
     }
 }, true);
+*/
 
-var obs      = new MutationObserver ( function ( muts ) {
+
+// @Incomplete
+
+
+const childMut = "childList";
+
+var obs = new MutationObserver ( function ( muts ) {
   muts.forEach ( function ( mut ) {
-    if ( t_div !==  null ) {obs.disconnect()}
-    else {
 
-      console.log ( mut.addedNodes );
-      t_div = mut.addedNodes[0]
-      t_div.style.position = "absolute";
-      t_div.style.cursor   = 
-      t_div.addEventListener('mousedown', function(e) {
-        isDown = true;
-        offset = [
-          t_div.offsetLeft - e.clientX,
-          t_div.offsetTop - e.clientY
-        ];
-      }, true);
-
+    if ( mut.type === childMut ){
+      button_div = div.firstChild.firstChild;
+      button_div.addEventListener ( "click", (e) => {
+        state.closed_container_conv = !state.closed_container_conv;
+        /*
+        if ( t_div !== null ) {}
+        else {
+          t_div = document.getElementsByClassName ( t_div_id );
+          console.log (t_div );
+        }
+        */
+      });
     }
-  })
+
+  });
 });
 
-var config   = { attributes: false, childList: true, characterData: false };
+var config   = { attributes: true, childList: true, characterData: true};
 obs.observe ( div, config );
