@@ -27,14 +27,13 @@ public final class Parser {
   public static void consume ( String content, HashMap<String, String[]> storage ){
 
     String[] splited = content.split( COLUMN );
-    String intent    = splited[0];
+    String intent    = splited[0].trim();
 
     String[] trainingSentences = splited[1].split( SEPERATOR );
     
     // cleaning the trainingSentences
     int length = trainingSentences.length;
-    for ( int i = 0; i < length ; i ++ ) {
-      trainingSentences[i] = trainingSentences[i].trim();
+    for ( int i = 0; i < length ; i ++ ) { trainingSentences[i] = trainingSentences[i].trim();
     }
 
     System.out.println("trainingSentences : " + Arrays.toString(trainingSentences) );
@@ -53,7 +52,7 @@ public final class Parser {
         ret.add ( sc.nextLine ().trim() );
       }
     }catch ( FileNotFoundException e ) {
-      System.out.println( "@rF @Parser" );
+      System.out.println( "@rF @Parser File is not found Exception : " + file );
     }
       
     for ( String str : ret ) {

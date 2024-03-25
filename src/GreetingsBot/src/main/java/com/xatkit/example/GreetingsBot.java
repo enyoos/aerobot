@@ -15,6 +15,9 @@ import static com.xatkit.dsl.DSL.intentIs;
 import static com.xatkit.dsl.DSL.model;
 import static com.xatkit.dsl.DSL.state;
 
+import com.xatkit.dsl.state.*;
+import com.xatkit.dsl.intent.*;
+
 import java.util.*;
 import lombok.val;
 
@@ -29,77 +32,78 @@ public class GreetingsBot {
 
         private static NavTree tree    = NavTree.init_nav_3();
         private static State state     = new State();
+        // port of the nlp-js server.
         private static int PORT        = 6666;
 
        // PRINT EVAL LOOP
         public static void main(String[] args) {
 
-                val menu           = intent("Menu")
+                final IntentMandatoryTrainingSentenceStep menu           = intent("Menu")
                         .trainingSentences(menu_);
 
-                val cheat          = intent("Cheat")
+                final IntentMandatoryTrainingSentenceStep cheat          = intent("Cheat")
                         .trainingSentences(cheat_);
 
-                val thankful       = intent("Thankful")
+                final IntentMandatoryTrainingSentenceStep thankful       = intent("Thankful")
                         .trainingSentences( thankful_ );
 
-                val howAreYou      = intent("HowAreYou")
+                final IntentMandatoryTrainingSentenceStep howAreYou      = intent("HowAreYou")
                         .trainingSentences(howAreYou_);
 
-                val sad            = intent ( "Sad" )
+                final IntentMandatoryTrainingSentenceStep sad            = intent ( "Sad" )
                         .trainingSentences( sad_ );
 
-                val origins        = intent( "Origin" )
+                final IntentMandatoryTrainingSentenceStep origins        = intent( "Origin" )
                         .trainingSentences( origins_ );
 
-                val happy          = intent ( "Happy" )
+                final IntentMandatoryTrainingSentenceStep happy          = intent ( "Happy" )
                         .trainingSentences( joy_ );
                 
-                val greetings      = intent ("Greetings" )
+                final IntentMandatoryTrainingSentenceStep greetings      = intent ("Greetings" )
                         .trainingSentences( greetings_ );
 
-                val indecis        = intent ("Indecision")
+                final IntentMandatoryTrainingSentenceStep indecis        = intent ("Indecision")
                         .trainingSentences( indecis_ );
 
                 ReactPlatform reactPlatform             = new ReactPlatform();
                 ReactEventProvider reactEventProvider   = reactPlatform.getReactEventProvider();
                 ReactIntentProvider reactIntentProvider = reactPlatform.getReactIntentProvider();
 
-                val init = state("Init");
-                val handleSaved      = state ( "Saved" );
-                val answerQuestion = state ( "ansQuestionChoosed" );
-                val awaitingInput  = state("AwaitingInput");
-                val handleWelcome  = state("HandleWelcome");
-                val promptChooseSubject = state ( "PromptSubject" );
-                val handleWhatsUp  = state("HandleWhatsUp");
-                val handleQuestion = state("HandleQuestion");
-                val handleBooking  = state("HandleBooking");
-                val handleThankful = state("HandleThankful");
-                val handleCheat    = state("HandleCheat");
-                val handleHappy    = state("HandleHappy");
-                val giveTutorDesc = state ( "giveDesc" );
-                val handleSad      = state("HandleSad");
-                val promptUser       = state ( "promptUser" );
-                val handleSuggestion = state ( "HandleSugg" );
-                val handleChimie = state ( "HandleChimie" );
-                val handleListMatiereMath  = state ( "listMath" );
-                val handleAlgebreLineaire  = state ( "HandleAlgebreLineaire" );
-                val handleCalcul_I         = state ( "HandleCalculI");
-                val handleCalcul_II        = state ( "HandleCalculII");
-                val handlePhysique         = state ( "HandlePhysique");
-                val giveAllPhysTutors   = state ( "giveAllPhysTutors" );        
-                val giveAllChimieTutors = state ( "giveAllChimieTutors" );
-                val giveAllMathTutors   = state ( "giveAllMathTutors" );
-                val handleCalculusI = state( "HandleCalculusI" );
-                val handleCalculusII = state ( "HandleCalculusII" );
-                val handleDiscreteMath = state ( "HandleDMath" );
-                val listAllQuestionMath = state ( "allQMathCalc" );
-                val listAllQuestionChimie = state ( "allQChimie" );
-                val handleQuitMenu      = state ( "handleQuitMenu" );
-                val handleGreetings     = state ( "handleGreetings" );
-                val handleOrigins       = state ( "handleOrigins" );
-                val handleIndecis       = state ( "handleIndecis" );
-                val handleFaitInt       = state ( "handleFaitInt ");
+                final BodyStep init = state("Init");
+                final BodyStep handleSaved      = state ( "Saved" );
+                final BodyStep answerQuestion = state ( "ansQuestionChoosed" );
+                final BodyStep awaitingInput  = state("AwaitingInput");
+                final BodyStep handleWelcome  = state("HandleWelcome");
+                final BodyStep promptChooseSubject = state ( "PromptSubject" );
+                final BodyStep handleWhatsUp  = state("HandleWhatsUp");
+                final BodyStep handleQuestion = state("HandleQuestion");
+                final BodyStep handleBooking  = state("HandleBooking");
+                final BodyStep handleThankful = state("HandleThankful");
+                final BodyStep handleCheat    = state("HandleCheat");
+                final BodyStep handleHappy    = state("HandleHappy");
+                final BodyStep giveTutorDesc = state ( "giveDesc" );
+                final BodyStep handleSad      = state("HandleSad");
+                final BodyStep promptUser       = state ( "promptUser" );
+                final BodyStep handleSuggestion = state ( "HandleSugg" );
+                final BodyStep handleChimie = state ( "HandleChimie" );
+                final BodyStep handleListMatiereMath  = state ( "listMath" );
+                final BodyStep handleAlgebreLineaire  = state ( "HandleAlgebreLineaire" );
+                final BodyStep handleCalcul_I         = state ( "HandleCalculI");
+                final BodyStep handleCalcul_II        = state ( "HandleCalculII");
+                final BodyStep handlePhysique         = state ( "HandlePhysique");
+                final BodyStep giveAllPhysTutors   = state ( "giveAllPhysTutors" );        
+                final BodyStep giveAllChimieTutors = state ( "giveAllChimieTutors" );
+                final BodyStep giveAllMathTutors   = state ( "giveAllMathTutors" );
+                final BodyStep handleCalculusI = state( "HandleCalculusI" );
+                final BodyStep handleCalculusII = state ( "HandleCalculusII" );
+                final BodyStep handleDiscreteMath = state ( "HandleDMath" );
+                final BodyStep listAllQuestionMath = state ( "allQMathCalc" );
+                final BodyStep listAllQuestionChimie = state ( "allQChimie" );
+                final BodyStep handleQuitMenu      = state ( "handleQuitMenu" );
+                final BodyStep handleGreetings     = state ( "handleGreetings" );
+                final BodyStep handleOrigins       = state ( "handleOrigins" );
+                final BodyStep handleIndecis       = state ( "handleIndecis" );
+                final BodyStep handleFaitInt       = state ( "handleFaitInt ");
 
 
                 init
