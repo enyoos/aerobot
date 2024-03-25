@@ -7,7 +7,21 @@ import com.xatkit.core.recognition.*;
 import com.xatkit.library.core.CoreLibrary;
 import com.xatkit.example.helpers.*;
 import com.xatkit.core.recognition.nlpjs.*;
+import com.xatkit.dsl.state.* ;
+import com.xatkit.dsl.intent.*;
+import com.xatkit.dsl.model.UseEventStep;
+
+import java.util.*;
+import lombok.val;
+
+import org.apache.commons.configuration2.BaseConfiguration;
 import org.apache.commons.configuration2.Configuration;
+
+import com.xatkit.plugins.react.platform.action.*;
+import com.xatkit.plugins.react.platform.io.*;
+
+import static com.xatkit.example.helpers.Utils.*;
+import static com.xatkit.example.helpers.Intents.*;
 import static com.xatkit.dsl.DSL.eventIs;
 import static com.xatkit.dsl.DSL.fallbackState;
 import static com.xatkit.dsl.DSL.intent;
@@ -15,18 +29,6 @@ import static com.xatkit.dsl.DSL.intentIs;
 import static com.xatkit.dsl.DSL.model;
 import static com.xatkit.dsl.DSL.state;
 
-import com.xatkit.dsl.state.*;
-import com.xatkit.dsl.intent.*;
-
-import java.util.*;
-import lombok.val;
-
-import static com.xatkit.plugins.react.platform.utils.MessageUtils.*;
-import com.xatkit.plugins.react.platform.action.*;
-import com.xatkit.plugins.react.platform.io.*;
-import org.apache.commons.configuration2.BaseConfiguration;
-import static com.xatkit.example.helpers.Utils.*;
-import static com.xatkit.example.helpers.Intents.*;
 
 public class GreetingsBot {
 
@@ -69,7 +71,10 @@ public class GreetingsBot {
                 ReactEventProvider reactEventProvider   = reactPlatform.getReactEventProvider();
                 ReactIntentProvider reactIntentProvider = reactPlatform.getReactIntentProvider();
 
+                // this is the basic and default state for everything
+                // cannot customized it ?
                 final BodyStep init = state("Init");
+
                 final BodyStep handleSaved      = state ( "Saved" );
                 final BodyStep answerQuestion = state ( "ansQuestionChoosed" );
                 final BodyStep awaitingInput  = state("AwaitingInput");
@@ -476,6 +481,7 @@ public class GreetingsBot {
                                         return true;
                                 })).moveTo( answerQuestion );
 
+                // this is also defaulted
                 val defaultFallback = fallbackState()
                         .body(context -> {
                                 reactPlatform.reply(context, "Excuse-moi, mais je n'ai pas bien saisi🤭");

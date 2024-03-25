@@ -1,4 +1,5 @@
 const express = require('express')
+const cors    = require('cors')
 const methodOverride = require('method-override')
 
 const swaggerUi = require('swagger-ui-express')
@@ -8,7 +9,8 @@ const indexRouter = require('./routes/index')
 const apiRouter = require('./routes/api')
 
 const server = express()
-const port = process.env.PORT || 6666
+server.use ( cors( ) )
+const port = 6666
 
 server.use(express.json({limit: '50mb'}));
 server.use(express.urlencoded({limit: '50mb', extended: false}));
