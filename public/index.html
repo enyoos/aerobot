@@ -5,12 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
 
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">-->
-    <link href="xatkit.css" rel="stylesheet">
+    <!-- sugg, install everything locally so its more fast ? -->
+    <!-- For the Latex rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <!-- For the conversation chat bot box styling, use the minified version during production -->
+    <link href="styles/xatkit.css" rel="stylesheet">
 
     <!-- latex -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+      onload="renderMathInElement(
+        document.body,
+        {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '\\[', right: '\\]', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false}
+          ],
+          throwOnError : true, /* change it when it comes to production */
+        }
+      );"></script>
 
     <!-- react cdns -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -24,13 +39,19 @@
 
   </head>
   <body id="somebody">
+    <!-- "main" div is the root component of our react application -->
     <div id="main"></div>
+
+    <!-- Testing latex rendering here -->
+    <div id="example"><span>The latex equation : $55x + 55$</span></div>
+
     <h1>Press <img src="esc_key.gif"/> to toggle chat</h1>
     <div id="chat"></div>
   </body>
 
-  <script src="monitor.js"></script>
-  <script src="xatkit.min.js"></script>
+  <script src="scripts/monitor.js"></script>
+  <script src="cdns/xatkit.min.js"></script>
+  <script src="scripts/dyn.js" type="module"></script>
   <script>
     const PORT = 5001;
 
