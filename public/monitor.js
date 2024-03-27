@@ -1,6 +1,6 @@
 var counter       = 0;
 var isDown        = false;
-const CTRL        = 17; 
+const TOGGLE_KEY  = 27; 
 const DIV_ID      = "chat";
 const div         = document.getElementById ( DIV_ID );
 let moveable_div  = null;
@@ -15,7 +15,7 @@ document.addEventListener('mouseup', function() {
 
 // escape key is for closing the dialog
 document.addEventListener('keyup', (e) => {
-  if ( e.keyCode === CTRL ) { 
+  if ( e.keyCode === TOGGLE_KEY ) { 
     if ( button_div !== null ) {
       button_div.click();
       state.closed_container_conv = !state.closed_container_conv;
