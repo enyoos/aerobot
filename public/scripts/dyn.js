@@ -1,5 +1,3 @@
-import renderMathInElement from "https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.mjs";
-
 const span        = document.getElementById ( "eq" );
 const button      = document.getElementById ( "button" );
 const targetNode  = document.getElementById ( "chat");
@@ -39,10 +37,11 @@ var observer = new MutationObserver(callback);
 
 // Start observing the target node for configured mutations
 observer.observe(targetNode, config);
+*/
 
-/*
+
 function render () {
-  span.innerHTML = "Render Latex : " + "$5xx$";
+  console.log ( "Re-rendering" );
   renderMathInElement( document.body ,
     {
       delimiters: [
@@ -51,11 +50,11 @@ function render () {
         {left: '$', right: '$', display: false},
         {left: '\\(', right: '\\)', display: false}
       ],
-      throwOnError : true, //change it when it comes to production
+      throwOnError : true,
     }
  );
 }
-*/
+
 
 // button.addEventListener( "click", render );
 // it works
